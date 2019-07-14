@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EB8308E422DB5AB2009C6520 /* FileNotebook.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8308E322DB5AB2009C6520 /* FileNotebook.swift */; };
+		EB8308E522DB5AB2009C6520 /* FileNotebook.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8308E322DB5AB2009C6520 /* FileNotebook.swift */; };
 		EBA9185022CA9AB800296CAA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA9184F22CA9AB800296CAA /* AppDelegate.swift */; };
 		EBA9185222CA9AB800296CAA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA9185122CA9AB800296CAA /* SceneDelegate.swift */; };
 		EBA9185422CA9AB800296CAA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA9185322CA9AB800296CAA /* ViewController.swift */; };
@@ -32,6 +34,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EB8308E322DB5AB2009C6520 /* FileNotebook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileNotebook.swift; sourceTree = "<group>"; };
 		EBA9184C22CA9AB800296CAA /* YandexCourse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YandexCourse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBA9184F22CA9AB800296CAA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EBA9185122CA9AB800296CAA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -79,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				EB8308E022DB59AC009C6520 /* Note */,
+				EB8308E322DB5AB2009C6520 /* FileNotebook.swift */,
 			);
 			path = FileNotebook;
 			sourceTree = "<group>";
@@ -227,6 +231,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB8308E422DB5AB2009C6520 /* FileNotebook.swift in Sources */,
 				EBB0884322D2522C0042ED0F /* NoteExtension.swift in Sources */,
 				EBA9185422CA9AB800296CAA /* ViewController.swift in Sources */,
 				EBA9185022CA9AB800296CAA /* AppDelegate.swift in Sources */,
@@ -239,6 +244,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB8308E522DB5AB2009C6520 /* FileNotebook.swift in Sources */,
 				EBFA2B9022DB3ACB00E6C135 /* YandexCourseUnitTests.swift in Sources */,
 				EBFA2B9822DB3AD900E6C135 /* NoteExtension.swift in Sources */,
 				EBFA2B9722DB3AD500E6C135 /* Note.swift in Sources */,
