@@ -75,6 +75,14 @@
 			path = Note;
 			sourceTree = "<group>";
 		};
+		EB8308E222DB5A8D009C6520 /* FileNotebook */ = {
+			isa = PBXGroup;
+			children = (
+				EB8308E022DB59AC009C6520 /* Note */,
+			);
+			path = FileNotebook;
+			sourceTree = "<group>";
+		};
 		EBA9184322CA9AB800296CAA = {
 			isa = PBXGroup;
 			children = (
@@ -96,7 +104,7 @@
 		EBA9184E22CA9AB800296CAA /* YandexCourse */ = {
 			isa = PBXGroup;
 			children = (
-				EB8308E022DB59AC009C6520 /* Note */,
+				EB8308E222DB5A8D009C6520 /* FileNotebook */,
 				EBA9184F22CA9AB800296CAA /* AppDelegate.swift */,
 				EBA9185122CA9AB800296CAA /* SceneDelegate.swift */,
 				EBA9185322CA9AB800296CAA /* ViewController.swift */,
