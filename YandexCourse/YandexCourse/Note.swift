@@ -41,7 +41,7 @@ struct Note {
 
 // MARK: - Importance
 
-enum Importance {
+enum Importance: String {
 
     // MARK: - Cases
 
