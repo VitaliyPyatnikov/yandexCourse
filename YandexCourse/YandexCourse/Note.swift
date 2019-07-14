@@ -49,3 +49,7 @@ enum Importance: String {
     case usual
     case important
 }
+
+// MARK: - CaseIterable
+
+extension Importance: CaseIterable { }
