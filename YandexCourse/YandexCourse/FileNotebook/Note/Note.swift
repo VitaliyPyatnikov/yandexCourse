@@ -38,6 +38,9 @@ struct Note {
     }
 }
 
+// MARK: - Equatable
+
+extension Note: Equatable { }
 
 // MARK: - Importance
 
