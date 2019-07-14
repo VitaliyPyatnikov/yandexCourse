@@ -15,7 +15,21 @@
 		EBA9185C22CA9ABA00296CAA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBA9185A22CA9ABA00296CAA /* LaunchScreen.storyboard */; };
 		EBA9186422CA9AD400296CAA /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA9186322CA9AD400296CAA /* Note.swift */; };
 		EBB0884322D2522C0042ED0F /* NoteExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB0884222D2522C0042ED0F /* NoteExtension.swift */; };
+		EBFA2B9022DB3ACB00E6C135 /* YandexCourseUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFA2B8F22DB3ACB00E6C135 /* YandexCourseUnitTests.swift */; };
+		EBFA2B9722DB3AD500E6C135 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA9186322CA9AD400296CAA /* Note.swift */; };
+		EBFA2B9822DB3AD900E6C135 /* NoteExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB0884222D2522C0042ED0F /* NoteExtension.swift */; };
+		EBFA2B9A22DB3B4900E6C135 /* NoteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFA2B9922DB3B4900E6C135 /* NoteTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EBFA2B9222DB3ACB00E6C135 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EBA9184422CA9AB800296CAA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EBA9184B22CA9AB800296CAA;
+			remoteInfo = YandexCourse;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		EBA9184C22CA9AB800296CAA /* YandexCourse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YandexCourse.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -28,10 +42,21 @@
 		EBA9185D22CA9ABA00296CAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EBA9186322CA9AD400296CAA /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		EBB0884222D2522C0042ED0F /* NoteExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteExtension.swift; sourceTree = "<group>"; };
+		EBFA2B8D22DB3ACB00E6C135 /* YandexCourseUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YandexCourseUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBFA2B8F22DB3ACB00E6C135 /* YandexCourseUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YandexCourseUnitTests.swift; sourceTree = "<group>"; };
+		EBFA2B9122DB3ACB00E6C135 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EBFA2B9922DB3B4900E6C135 /* NoteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		EBA9184922CA9AB800296CAA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EBFA2B8A22DB3ACB00E6C135 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -45,6 +70,7 @@
 			isa = PBXGroup;
 			children = (
 				EBA9184E22CA9AB800296CAA /* YandexCourse */,
+				EBFA2B8E22DB3ACB00E6C135 /* YandexCourseUnitTests */,
 				EBA9184D22CA9AB800296CAA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -53,6 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				EBA9184C22CA9AB800296CAA /* YandexCourse.app */,
+				EBFA2B8D22DB3ACB00E6C135 /* YandexCourseUnitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -71,6 +98,16 @@
 				EBA9185D22CA9ABA00296CAA /* Info.plist */,
 			);
 			path = YandexCourse;
+			sourceTree = "<group>";
+		};
+		EBFA2B8E22DB3ACB00E6C135 /* YandexCourseUnitTests */ = {
+			isa = PBXGroup;
+			children = (
+				EBFA2B8F22DB3ACB00E6C135 /* YandexCourseUnitTests.swift */,
+				EBFA2B9922DB3B4900E6C135 /* NoteTests.swift */,
+				EBFA2B9122DB3ACB00E6C135 /* Info.plist */,
+			);
+			path = YandexCourseUnitTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -93,6 +130,24 @@
 			productReference = EBA9184C22CA9AB800296CAA /* YandexCourse.app */;
 			productType = "com.apple.product-type.application";
 		};
+		EBFA2B8C22DB3ACB00E6C135 /* YandexCourseUnitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EBFA2B9622DB3ACB00E6C135 /* Build configuration list for PBXNativeTarget "YandexCourseUnitTests" */;
+			buildPhases = (
+				EBFA2B8922DB3ACB00E6C135 /* Sources */,
+				EBFA2B8A22DB3ACB00E6C135 /* Frameworks */,
+				EBFA2B8B22DB3ACB00E6C135 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EBFA2B9322DB3ACB00E6C135 /* PBXTargetDependency */,
+			);
+			name = YandexCourseUnitTests;
+			productName = YandexCourseUnitTests;
+			productReference = EBFA2B8D22DB3ACB00E6C135 /* YandexCourseUnitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -105,6 +160,10 @@
 				TargetAttributes = {
 					EBA9184B22CA9AB800296CAA = {
 						CreatedOnToolsVersion = 11.0;
+					};
+					EBFA2B8C22DB3ACB00E6C135 = {
+						CreatedOnToolsVersion = 11.0;
+						TestTargetID = EBA9184B22CA9AB800296CAA;
 					};
 				};
 			};
@@ -122,6 +181,7 @@
 			projectRoot = "";
 			targets = (
 				EBA9184B22CA9AB800296CAA /* YandexCourse */,
+				EBFA2B8C22DB3ACB00E6C135 /* YandexCourseUnitTests */,
 			);
 		};
 /* End PBXProject section */
@@ -134,6 +194,13 @@
 				EBA9185C22CA9ABA00296CAA /* LaunchScreen.storyboard in Resources */,
 				EBA9185922CA9ABA00296CAA /* Assets.xcassets in Resources */,
 				EBA9185722CA9AB800296CAA /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EBFA2B8B22DB3ACB00E6C135 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,7 +219,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EBFA2B8922DB3ACB00E6C135 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EBFA2B9022DB3ACB00E6C135 /* YandexCourseUnitTests.swift in Sources */,
+				EBFA2B9822DB3AD900E6C135 /* NoteExtension.swift in Sources */,
+				EBFA2B9722DB3AD500E6C135 /* Note.swift in Sources */,
+				EBFA2B9A22DB3B4900E6C135 /* NoteTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EBFA2B9322DB3ACB00E6C135 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EBA9184B22CA9AB800296CAA /* YandexCourse */;
+			targetProxy = EBFA2B9222DB3ACB00E6C135 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		EBA9185522CA9AB800296CAA /* Main.storyboard */ = {
@@ -324,6 +410,47 @@
 			};
 			name = Release;
 		};
+		EBFA2B9422DB3ACB00E6C135 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RNQ4ECEX2X;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INFOPLIST_FILE = YandexCourseUnitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.work.yandexCourseUnitTests.YandexCourseUnitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YandexCourse.app/YandexCourse";
+			};
+			name = Debug;
+		};
+		EBFA2B9522DB3ACB00E6C135 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RNQ4ECEX2X;
+				INFOPLIST_FILE = YandexCourseUnitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.work.yandexCourseUnitTests.YandexCourseUnitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YandexCourse.app/YandexCourse";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -341,6 +468,15 @@
 			buildConfigurations = (
 				EBA9186122CA9ABA00296CAA /* Debug */,
 				EBA9186222CA9ABA00296CAA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EBFA2B9622DB3ACB00E6C135 /* Build configuration list for PBXNativeTarget "YandexCourseUnitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EBFA2B9422DB3ACB00E6C135 /* Debug */,
+				EBFA2B9522DB3ACB00E6C135 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
