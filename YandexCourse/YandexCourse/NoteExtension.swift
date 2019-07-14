@@ -70,6 +70,7 @@ extension Note {
             var green: CGFloat = 0
             var blue: CGFloat = 0
             var alpha: CGFloat = 0
+            // TODO: - Move to UIColor extension
             color.getRed(&red, green: &green, blue: &blue, alpha: &alpha)
             colorObject.updateValue(red, forKey: "red")
             colorObject.updateValue(green, forKey: "green")
