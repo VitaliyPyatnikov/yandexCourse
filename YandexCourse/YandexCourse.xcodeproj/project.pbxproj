@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		EB8308E422DB5AB2009C6520 /* FileNotebook.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8308E322DB5AB2009C6520 /* FileNotebook.swift */; };
 		EB8308E522DB5AB2009C6520 /* FileNotebook.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8308E322DB5AB2009C6520 /* FileNotebook.swift */; };
+		EB8308E822DB6101009C6520 /* FileNotebookTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8308E622DB6101009C6520 /* FileNotebookTest.swift */; };
 		EBA9185022CA9AB800296CAA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA9184F22CA9AB800296CAA /* AppDelegate.swift */; };
 		EBA9185222CA9AB800296CAA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA9185122CA9AB800296CAA /* SceneDelegate.swift */; };
 		EBA9185422CA9AB800296CAA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA9185322CA9AB800296CAA /* ViewController.swift */; };
@@ -35,6 +36,7 @@
 
 /* Begin PBXFileReference section */
 		EB8308E322DB5AB2009C6520 /* FileNotebook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileNotebook.swift; sourceTree = "<group>"; };
+		EB8308E622DB6101009C6520 /* FileNotebookTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileNotebookTest.swift; sourceTree = "<group>"; };
 		EBA9184C22CA9AB800296CAA /* YandexCourse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YandexCourse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBA9184F22CA9AB800296CAA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EBA9185122CA9AB800296CAA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 			children = (
 				EBFA2B8F22DB3ACB00E6C135 /* YandexCourseUnitTests.swift */,
 				EBFA2B9922DB3B4900E6C135 /* NoteTests.swift */,
+				EB8308E622DB6101009C6520 /* FileNotebookTest.swift */,
 				EBFA2B9122DB3ACB00E6C135 /* Info.plist */,
 			);
 			path = YandexCourseUnitTests;
@@ -248,6 +251,7 @@
 				EBFA2B9022DB3ACB00E6C135 /* YandexCourseUnitTests.swift in Sources */,
 				EBFA2B9822DB3AD900E6C135 /* NoteExtension.swift in Sources */,
 				EBFA2B9722DB3AD500E6C135 /* Note.swift in Sources */,
+				EB8308E822DB6101009C6520 /* FileNotebookTest.swift in Sources */,
 				EBFA2B9A22DB3B4900E6C135 /* NoteTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
