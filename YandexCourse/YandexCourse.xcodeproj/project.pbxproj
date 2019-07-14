@@ -14,6 +14,7 @@
 		EBA9185922CA9ABA00296CAA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBA9185822CA9ABA00296CAA /* Assets.xcassets */; };
 		EBA9185C22CA9ABA00296CAA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBA9185A22CA9ABA00296CAA /* LaunchScreen.storyboard */; };
 		EBA9186422CA9AD400296CAA /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA9186322CA9AD400296CAA /* Note.swift */; };
+		EBB0884322D2522C0042ED0F /* NoteExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB0884222D2522C0042ED0F /* NoteExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		EBA9185B22CA9ABA00296CAA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EBA9185D22CA9ABA00296CAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EBA9186322CA9AD400296CAA /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
+		EBB0884222D2522C0042ED0F /* NoteExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 			children = (
 				EBA9184F22CA9AB800296CAA /* AppDelegate.swift */,
 				EBA9186322CA9AD400296CAA /* Note.swift */,
+				EBB0884222D2522C0042ED0F /* NoteExtension.swift */,
 				EBA9185122CA9AB800296CAA /* SceneDelegate.swift */,
 				EBA9185322CA9AB800296CAA /* ViewController.swift */,
 				EBA9185522CA9AB800296CAA /* Main.storyboard */,
@@ -141,6 +144,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBB0884322D2522C0042ED0F /* NoteExtension.swift in Sources */,
 				EBA9185422CA9AB800296CAA /* ViewController.swift in Sources */,
 				EBA9185022CA9AB800296CAA /* AppDelegate.swift in Sources */,
 				EBA9185222CA9AB800296CAA /* SceneDelegate.swift in Sources */,
@@ -209,7 +213,7 @@
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_OPTIMIZATION_LEVEL = s;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
