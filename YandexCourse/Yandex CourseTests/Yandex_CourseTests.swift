@@ -1,14 +1,15 @@
 //
-//  YandexCourseUnitTests.swift
-//  YandexCourseUnitTests
+//  Yandex_CourseTests.swift
+//  Yandex CourseTests
 //
-//  Created by Vitaliy Pyatnikov on 14.07.2019.
+//  Created by Vitaliy Pyatnikov on 15.07.2019.
 //  Copyright © 2019 Vitaliy Pyatnikov. All rights reserved.
 //
 
 import XCTest
+@testable import Yandex_Course
 
-class YandexCourseUnitTests: XCTestCase {
+class Yandex_CourseTests: XCTestCase {
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
