@@ -60,7 +60,9 @@ extension FileNotebook: FileNotebookHandler {
     }
 
     func add(_ note: Note) {
-        storedNotes.append(note)
+        if !storedNotes.contains(where: { $0.uid == note.uid }) {
+            storedNotes.append(note)
+        }
     }
     func remove(with uid: String) {
         storedNotes.removeAll { (note) -> Bool in
