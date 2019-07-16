@@ -69,4 +69,17 @@ class FileNotebookTest: XCTestCase {
             XCTAssert(note == notesFromFile[index], "Notes are not equal")
         }
     }
+    func testAddTheSameNotes() {
+        let noteOne = Note(title: "Test one",
+                           content: "Content one",
+                           importance: .important)
+        let noteTwo = noteOne
+
+        let filesBook: FileNotebookHandler = FileNotebook()
+        filesBook.add(noteOne)
+        filesBook.add(noteTwo)
+        let notes = filesBook.notes
+
+        XCTAssertEqual(notes.count, 1, "Incorrect count of notes, duplicate added")
+    }
 }
