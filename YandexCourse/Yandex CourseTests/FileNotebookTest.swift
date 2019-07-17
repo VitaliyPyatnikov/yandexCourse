@@ -88,4 +88,12 @@ class FileNotebookTest: XCTestCase {
 
         XCTAssertEqual(notes.count, 1, "Incorrect count of notes, duplicate added")
     }
+    func testRemoveNoteFromEmptyArray() {
+        let filesBook: FileNotebookHandler = FileNotebook()
+        let initialCount = filesBook.notes.count
+        let uid = UUID().uuidString
+        filesBook.remove(with: uid)
+        let finalCount = filesBook.notes.count
+        XCTAssertEqual(initialCount, finalCount, "Incorrect count of notes")
+    }
 }
