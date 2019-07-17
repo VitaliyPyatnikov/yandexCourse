@@ -22,9 +22,13 @@ protocol FileNotebookHandler {
     ///     - uid: UID with which the note should be deleted
     func remove(with uid: String)
     /// Save FileNotebook to the storage
-    func saveToFile()
+    /// - Returns: **true** if saving successfully completed,
+    /// otherwise —- **false**
+    func saveToFile() -> Bool
     /// Load FileNotebook from the storage
-    func loadFromFile()
+    /// - Returns: **true** if loading successfully completed,
+    /// otherwise —- **false**
+    func loadFromFile() -> Bool
 }
 
 // MARK: - FileNotebook
@@ -69,9 +73,9 @@ extension FileNotebook: FileNotebookHandler {
             note.uid == uid
         }
     }
-    func saveToFile() {
+    func saveToFile() -> Bool {
         guard let fileURL = fileUrl else {
-            return
+            return false
         }
         var jsons: [[String: Any]] = []
         storedNotes.forEach {
@@ -80,19 +84,23 @@ extension FileNotebook: FileNotebookHandler {
         do {
             let jsonData = try JSONSerialization.data(withJSONObject: jsons, options: [])
             guard let jsonString = String(data: jsonData, encoding: .utf8) else {
-                return
+                return false
             }
-            try jsonString.write(to: fileURL, atomically: true, encoding: String.Encoding.utf8)
+            try jsonString.write(to: fileURL,
+                                 atomically: true,
+                                 encoding: String.Encoding.utf8)
         } catch  {
             print(error)
+            return false
         }
+        return true
     }
-    func loadFromFile() {
+    func loadFromFile() -> Bool {
         guard let fileURL = fileUrl else {
-            return
+            return false
         }
         guard let jsonArray = getData(with: fileURL) else {
-            return
+            return false
         }
         storedNotes.removeAll()
         jsonArray.forEach {
@@ -101,6 +109,7 @@ extension FileNotebook: FileNotebookHandler {
             }
             storedNotes.append(note)
         }
+        return true
     }
 
     // MARK: - Private
