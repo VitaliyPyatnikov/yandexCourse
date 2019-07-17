@@ -71,8 +71,8 @@ class FileNotebookTest: XCTestCase {
         let notesFromFile = filesBook.notes
 
         XCTAssertEqual(notes.count, notesFromFile.count, "Incorrect count")
-        for (index, note) in notes.enumerated() {
-            XCTAssert(note == notesFromFile[index], "Notes are not equal")
+        for note in notes {
+            XCTAssert(notes.contains(note), "FileNotebooks are not equal")
         }
     }
     func testAddTheSameNotes() {
