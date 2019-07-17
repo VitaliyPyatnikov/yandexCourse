@@ -60,8 +60,14 @@ class FileNotebookTest: XCTestCase {
         filesBook.add(noteTwo)
         let notes = filesBook.notes
 
-        filesBook.saveToFile()
-        filesBook.loadFromFile()
+        guard filesBook.saveToFile() else {
+            XCTFail("Saving failed")
+            return
+        }
+        guard filesBook.loadFromFile() else {
+            XCTFail("Loading failed")
+            return
+        }
         let notesFromFile = filesBook.notes
 
         XCTAssertEqual(notes.count, notesFromFile.count, "Incorrect count")
