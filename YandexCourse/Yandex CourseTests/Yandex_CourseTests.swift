@@ -7,7 +7,6 @@
 //
 
 import XCTest
-@testable import Yandex_Course
 
 class Yandex_CourseTests: XCTestCase {
 
