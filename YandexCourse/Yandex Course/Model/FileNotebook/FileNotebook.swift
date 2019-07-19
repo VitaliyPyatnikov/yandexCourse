@@ -50,7 +50,7 @@ final class FileNotebook {
             let fileURL = documentDirectory.appendingPathComponent(name)
             return fileURL
         } catch {
-            print(error)
+            Log.error(error.localizedDescription)
         }
         return nil
     }()
@@ -65,16 +65,22 @@ extension FileNotebook: FileNotebookHandler {
 
     func add(_ note: Note) {
         if !storedNotes.contains(where: { $0.uid == note.uid }) {
+            Log.info("Successfully add new note with uid: \(note.uid)")
             storedNotes.append(note)
         }
     }
     func remove(with uid: String) {
         storedNotes.removeAll { (note) -> Bool in
-            note.uid == uid
+            if note.uid == uid {
+                Log.info("Remove note with uid: \(uid)")
+                return true
+            }
+            return false
         }
     }
     func saveToFile() -> Bool {
         guard let fileURL = fileUrl else {
+            Log.error("Can't save to file, fileURL is nil")
             return false
         }
         var jsons: [[String: Any]] = []
@@ -84,31 +90,37 @@ extension FileNotebook: FileNotebookHandler {
         do {
             let jsonData = try JSONSerialization.data(withJSONObject: jsons, options: [])
             guard let jsonString = String(data: jsonData, encoding: .utf8) else {
+                Log.error("Can't parse json to string")
                 return false
             }
             try jsonString.write(to: fileURL,
                                  atomically: true,
                                  encoding: String.Encoding.utf8)
         } catch  {
-            print(error)
+            Log.error(error.localizedDescription)
             return false
         }
+        Log.info("Successfully save to file")
         return true
     }
     func loadFromFile() -> Bool {
         guard let fileURL = fileUrl else {
+            Log.error("Can't fileURL is nil")
             return false
         }
         guard let jsonArray = getData(with: fileURL) else {
+            Log.error("Can't get data from link \(fileURL)")
             return false
         }
         storedNotes.removeAll()
         jsonArray.forEach {
             guard let note = Note.parse(json: $0) else {
+                Log.error("Can't parse note from json \($0)")
                 return
             }
             storedNotes.append(note)
         }
+        Log.info("Successfully load from file")
         return true
     }
 
@@ -122,7 +134,7 @@ extension FileNotebook: FileNotebookHandler {
                                                              options: []) as? [[String: Any]]
             return jsonArray
         } catch  {
-            print(error)
+            Log.error(error.localizedDescription)
         }
         return nil
     }

@@ -11,13 +11,12 @@ import UIKit
 
 extension Note {
     static func parse(json: [String: Any]) -> Note? {
-        // TODO: - change print with log
         guard let title = json["title"] as? String else {
-            print("Title not found in json: \(json)")
+            Log.error("Title not found in json: \(json)")
             return nil
         }
         guard let content = json["content"] as? String else {
-            print("Content not found in json: \(json)")
+            Log.error("Content not found in json: \(json)")
             return nil
         }
         let importance: Importance
@@ -28,7 +27,7 @@ extension Note {
         }
 
         guard let uid = json["uid"] as? String else {
-            print("Uid not found in json: \(json)")
+            Log.error("Uid not found in json: \(json)")
             return nil
         }
         let color: UIColor
@@ -39,7 +38,7 @@ extension Note {
             let alpha = colorDictionary["alpha"] as? CGFloat {
             color = UIColor(red: red, green: green, blue: blue, alpha: alpha)
         } else {
-            print("Color not found in json: \(json), use default")
+            Log.error("Color not found in json: \(json), use default")
             color = .white
         }
 
