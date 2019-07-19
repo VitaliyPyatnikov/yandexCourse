@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		21009724D4FAB8660BB12F0D /* libPods-Yandex CourseTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D65FEABD7EDB2194C9EEF5AC /* libPods-Yandex CourseTests.a */; };
+		366F5F6C93A8CF7D6C60C698 /* libPods-Yandex Course.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 42354E72F35BBA845562E7C3 /* libPods-Yandex Course.a */; };
 		EB868DA322DC776E0089FE7D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB868DA222DC776E0089FE7D /* AppDelegate.swift */; };
 		EB868DA522DC776E0089FE7D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB868DA422DC776E0089FE7D /* ViewController.swift */; };
 		EB868DA822DC776E0089FE7D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB868DA622DC776E0089FE7D /* Main.storyboard */; };
@@ -34,6 +36,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0D656F37B84B580D7EE323E0 /* Pods-Yandex CourseTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yandex CourseTests.debug.xcconfig"; path = "Target Support Files/Pods-Yandex CourseTests/Pods-Yandex CourseTests.debug.xcconfig"; sourceTree = "<group>"; };
+		2B22376D6DD2A647B4172341 /* Pods-Yandex CourseTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yandex CourseTests.release.xcconfig"; path = "Target Support Files/Pods-Yandex CourseTests/Pods-Yandex CourseTests.release.xcconfig"; sourceTree = "<group>"; };
+		42354E72F35BBA845562E7C3 /* libPods-Yandex Course.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Yandex Course.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8925195AFCE584E06361CB1A /* Pods-Yandex Course.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yandex Course.release.xcconfig"; path = "Target Support Files/Pods-Yandex Course/Pods-Yandex Course.release.xcconfig"; sourceTree = "<group>"; };
+		C7D54DF4FACC6FB71F72B80C /* Pods-Yandex Course.testing.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yandex Course.testing.xcconfig"; path = "Target Support Files/Pods-Yandex Course/Pods-Yandex Course.testing.xcconfig"; sourceTree = "<group>"; };
+		D65FEABD7EDB2194C9EEF5AC /* libPods-Yandex CourseTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Yandex CourseTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB868D9F22DC776E0089FE7D /* Yandex Course.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Yandex Course.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB868DA222DC776E0089FE7D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EB868DA422DC776E0089FE7D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +57,8 @@
 		EB868DC922DC778F0089FE7D /* NoteExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteExtension.swift; sourceTree = "<group>"; };
 		EB868DCA22DC778F0089FE7D /* Note.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		EB868DCB22DC778F0089FE7D /* FileNotebook.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileNotebook.swift; sourceTree = "<group>"; };
+		F2412EAEE9E341A376D53D05 /* Pods-Yandex CourseTests.testing.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yandex CourseTests.testing.xcconfig"; path = "Target Support Files/Pods-Yandex CourseTests/Pods-Yandex CourseTests.testing.xcconfig"; sourceTree = "<group>"; };
+		FE78D9FB2DCCD01CEB80E4B0 /* Pods-Yandex Course.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yandex Course.debug.xcconfig"; path = "Target Support Files/Pods-Yandex Course/Pods-Yandex Course.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				366F5F6C93A8CF7D6C60C698 /* libPods-Yandex Course.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,18 +74,43 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21009724D4FAB8660BB12F0D /* libPods-Yandex CourseTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7FC81F7237274E7B6B9892CD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				42354E72F35BBA845562E7C3 /* libPods-Yandex Course.a */,
+				D65FEABD7EDB2194C9EEF5AC /* libPods-Yandex CourseTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C2EC832AB50E54D2444FD482 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FE78D9FB2DCCD01CEB80E4B0 /* Pods-Yandex Course.debug.xcconfig */,
+				C7D54DF4FACC6FB71F72B80C /* Pods-Yandex Course.testing.xcconfig */,
+				8925195AFCE584E06361CB1A /* Pods-Yandex Course.release.xcconfig */,
+				0D656F37B84B580D7EE323E0 /* Pods-Yandex CourseTests.debug.xcconfig */,
+				F2412EAEE9E341A376D53D05 /* Pods-Yandex CourseTests.testing.xcconfig */,
+				2B22376D6DD2A647B4172341 /* Pods-Yandex CourseTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		EB868D9622DC776E0089FE7D = {
 			isa = PBXGroup;
 			children = (
 				EB868DA122DC776E0089FE7D /* Yandex Course */,
 				EB868DB622DC776F0089FE7D /* Yandex CourseTests */,
 				EB868DA022DC776E0089FE7D /* Products */,
+				C2EC832AB50E54D2444FD482 /* Pods */,
+				7FC81F7237274E7B6B9892CD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -145,6 +181,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EB868DBC22DC776F0089FE7D /* Build configuration list for PBXNativeTarget "Yandex Course" */;
 			buildPhases = (
+				799B37523E17D671EF6F8186 /* [CP] Check Pods Manifest.lock */,
 				EB868D9B22DC776E0089FE7D /* Sources */,
 				EB868D9C22DC776E0089FE7D /* Frameworks */,
 				EB868D9D22DC776E0089FE7D /* Resources */,
@@ -162,6 +199,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EB868DBF22DC776F0089FE7D /* Build configuration list for PBXNativeTarget "Yandex CourseTests" */;
 			buildPhases = (
+				E45961AF2694EE1B76ECD056 /* [CP] Check Pods Manifest.lock */,
 				EB868DAF22DC776F0089FE7D /* Sources */,
 				EB868DB022DC776F0089FE7D /* Frameworks */,
 				EB868DB122DC776F0089FE7D /* Resources */,
@@ -233,6 +271,53 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		799B37523E17D671EF6F8186 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Yandex Course-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E45961AF2694EE1B76ECD056 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Yandex CourseTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		EB868D9B22DC776E0089FE7D /* Sources */ = {
@@ -411,6 +496,7 @@
 		};
 		EB868DBD22DC776F0089FE7D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FE78D9FB2DCCD01CEB80E4B0 /* Pods-Yandex Course.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -429,6 +515,7 @@
 		};
 		EB868DBE22DC776F0089FE7D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8925195AFCE584E06361CB1A /* Pods-Yandex Course.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -447,6 +534,7 @@
 		};
 		EB868DC022DC776F0089FE7D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0D656F37B84B580D7EE323E0 /* Pods-Yandex CourseTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -468,6 +556,7 @@
 		};
 		EB868DC122DC776F0089FE7D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2B22376D6DD2A647B4172341 /* Pods-Yandex CourseTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -551,6 +640,7 @@
 		};
 		EBD2C27422DE657500378B96 /* Testing */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C7D54DF4FACC6FB71F72B80C /* Pods-Yandex Course.testing.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -569,6 +659,7 @@
 		};
 		EBD2C27522DE657500378B96 /* Testing */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F2412EAEE9E341A376D53D05 /* Pods-Yandex CourseTests.testing.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
