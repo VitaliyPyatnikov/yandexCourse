@@ -14,6 +14,12 @@
 		EB0596A022E317D80050E16A /* EditNote.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB05969F22E317D80050E16A /* EditNote.storyboard */; };
 		EB38F3E122E2084D007E07D2 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB38F3E022E2084D007E07D2 /* Log.swift */; };
 		EB38F3E222E2084D007E07D2 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB38F3E022E2084D007E07D2 /* Log.swift */; };
+		EB7FBB4C22E34BB400E440E7 /* ColorCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7FBB4A22E34BB400E440E7 /* ColorCollectionViewCell.swift */; };
+		EB7FBB4D22E34BB400E440E7 /* ColorCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7FBB4A22E34BB400E440E7 /* ColorCollectionViewCell.swift */; };
+		EB7FBB4E22E34BB400E440E7 /* ColorCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB7FBB4B22E34BB400E440E7 /* ColorCollectionViewCell.xib */; };
+		EB7FBB4F22E34BB400E440E7 /* ColorCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB7FBB4B22E34BB400E440E7 /* ColorCollectionViewCell.xib */; };
+		EB7FBB5122E34ECC00E440E7 /* ColorCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7FBB5022E34ECC00E440E7 /* ColorCellModel.swift */; };
+		EB7FBB5222E34ECC00E440E7 /* ColorCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7FBB5022E34ECC00E440E7 /* ColorCellModel.swift */; };
 		EB868DA322DC776E0089FE7D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB868DA222DC776E0089FE7D /* AppDelegate.swift */; };
 		EB868DA522DC776E0089FE7D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB868DA422DC776E0089FE7D /* ViewController.swift */; };
 		EB868DA822DC776E0089FE7D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB868DA622DC776E0089FE7D /* Main.storyboard */; };
@@ -50,6 +56,9 @@
 		EB05969C22E317890050E16A /* EditNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EditNoteViewController.swift; path = "../../../../../../../../../../System/Volumes/Data/Users/vitaliypyatnikov/Documents/Develop/swift/stepik/YandexCourse/YandexCourse/Yandex Course/EditNote/EditNoteViewController.swift"; sourceTree = "<group>"; };
 		EB05969F22E317D80050E16A /* EditNote.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = EditNote.storyboard; path = "../../../../../../../../../../System/Volumes/Data/Users/vitaliypyatnikov/Documents/Develop/swift/stepik/YandexCourse/YandexCourse/Yandex Course/EditNote/EditNote.storyboard"; sourceTree = "<group>"; };
 		EB38F3E022E2084D007E07D2 /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Log.swift; path = "../../../../../../../../../../System/Volumes/Data/Users/vitaliypyatnikov/Documents/Develop/swift/stepik/YandexCourse/YandexCourse/Yandex Course/Helpers/Log.swift"; sourceTree = "<group>"; };
+		EB7FBB4A22E34BB400E440E7 /* ColorCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ColorCollectionViewCell.swift; path = "../../../../../../../../../../../System/Volumes/Data/Users/vitaliypyatnikov/Documents/Develop/swift/stepik/YandexCourse/YandexCourse/Yandex Course/Views/ColorCell/ColorCollectionViewCell.swift"; sourceTree = "<group>"; };
+		EB7FBB4B22E34BB400E440E7 /* ColorCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ColorCollectionViewCell.xib; path = "../../../../../../../../../../../System/Volumes/Data/Users/vitaliypyatnikov/Documents/Develop/swift/stepik/YandexCourse/YandexCourse/Yandex Course/Views/ColorCell/ColorCollectionViewCell.xib"; sourceTree = "<group>"; };
+		EB7FBB5022E34ECC00E440E7 /* ColorCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ColorCellModel.swift; path = "../../../../../../../../../../System/Volumes/Data/Users/vitaliypyatnikov/Documents/Develop/swift/stepik/YandexCourse/YandexCourse/Yandex Course/Model/ColorCellModel.swift"; sourceTree = "<group>"; };
 		EB868D9F22DC776E0089FE7D /* Yandex Course.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Yandex Course.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB868DA222DC776E0089FE7D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EB868DA422DC776E0089FE7D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -128,6 +137,23 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		EB7FBB4822E34B7D00E440E7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EB7FBB4922E34B8D00E440E7 /* ColorCell */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		EB7FBB4922E34B8D00E440E7 /* ColorCell */ = {
+			isa = PBXGroup;
+			children = (
+				EB7FBB4A22E34BB400E440E7 /* ColorCollectionViewCell.swift */,
+				EB7FBB4B22E34BB400E440E7 /* ColorCollectionViewCell.xib */,
+			);
+			path = ColorCell;
+			sourceTree = "<group>";
+		};
 		EB868D9622DC776E0089FE7D = {
 			isa = PBXGroup;
 			children = (
@@ -153,6 +179,7 @@
 			children = (
 				EB38F3DF22E2083C007E07D2 /* Helpers */,
 				EB868DC622DC778F0089FE7D /* Model */,
+				EB7FBB4822E34B7D00E440E7 /* Views */,
 				EB05969522E311C60050E16A /* EditNote */,
 				EB868DA222DC776E0089FE7D /* AppDelegate.swift */,
 				EB868DA422DC776E0089FE7D /* ViewController.swift */,
@@ -179,6 +206,7 @@
 			isa = PBXGroup;
 			children = (
 				EB868DC722DC778F0089FE7D /* FileNotebook */,
+				EB7FBB5022E34ECC00E440E7 /* ColorCellModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -286,6 +314,7 @@
 			files = (
 				EB868DAD22DC776F0089FE7D /* LaunchScreen.storyboard in Resources */,
 				EB868DAA22DC776F0089FE7D /* Assets.xcassets in Resources */,
+				EB7FBB4E22E34BB400E440E7 /* ColorCollectionViewCell.xib in Resources */,
 				EB0596A022E317D80050E16A /* EditNote.storyboard in Resources */,
 				EB868DA822DC776E0089FE7D /* Main.storyboard in Resources */,
 			);
@@ -295,6 +324,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB7FBB4F22E34BB400E440E7 /* ColorCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -354,10 +384,12 @@
 			files = (
 				EB868DD022DC778F0089FE7D /* FileNotebook.swift in Sources */,
 				EB868DA522DC776E0089FE7D /* ViewController.swift in Sources */,
+				EB7FBB5122E34ECC00E440E7 /* ColorCellModel.swift in Sources */,
 				EB38F3E122E2084D007E07D2 /* Log.swift in Sources */,
 				EB05969D22E317890050E16A /* EditNoteViewController.swift in Sources */,
 				EB868DCC22DC778F0089FE7D /* NoteExtension.swift in Sources */,
 				EB868DA322DC776E0089FE7D /* AppDelegate.swift in Sources */,
+				EB7FBB4C22E34BB400E440E7 /* ColorCollectionViewCell.swift in Sources */,
 				EB868DCE22DC778F0089FE7D /* Note.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -372,6 +404,8 @@
 				EB868DCF22DC778F0089FE7D /* Note.swift in Sources */,
 				EB868DC522DC77820089FE7D /* NoteTests.swift in Sources */,
 				EB868DCD22DC778F0089FE7D /* NoteExtension.swift in Sources */,
+				EB7FBB4D22E34BB400E440E7 /* ColorCollectionViewCell.swift in Sources */,
+				EB7FBB5222E34ECC00E440E7 /* ColorCellModel.swift in Sources */,
 				EB868DC422DC77820089FE7D /* FileNotebookTest.swift in Sources */,
 				EB868DB822DC776F0089FE7D /* Yandex_CourseTests.swift in Sources */,
 			);
