@@ -23,7 +23,12 @@ final class ColorCollectionViewCell: UICollectionViewCell {
 
     func setup(withModel model: ColorCellModel) {
         shapeLayer.removeFromSuperlayer()
-        baseView.backgroundColor = model.color
+        gradientLayer.removeFromSuperlayer()
+        if model.color == .clear {
+            addGradient(to: baseView)
+        } else {
+            baseView.backgroundColor = model.color
+        }
         baseView.layer.borderWidth = CGFloat(1)
         baseView.layer.borderColor = UIColor.black.cgColor
         if model.isSelected {
@@ -33,6 +38,25 @@ final class ColorCollectionViewCell: UICollectionViewCell {
     }
 
     private let shapeLayer = CAShapeLayer()
+    private let gradientLayer = CAGradientLayer()
+
+    // MARK: - Gradient
+
+    private func addGradient(to parentView: UIView) {
+        gradientLayer.frame = parentView.bounds
+        gradientLayer.colors = [
+            UIColor.red.cgColor,
+            UIColor.yellow.cgColor,
+            UIColor.green.cgColor,
+            UIColor.cyan.cgColor,
+            UIColor.blue.cgColor,
+            UIColor.purple.cgColor
+        ]
+        gradientLayer.startPoint = CGPoint(x: 0, y: 0.5)
+        gradientLayer.endPoint = CGPoint(x: 1, y: 0.5)
+
+        parentView.layer.insertSublayer(gradientLayer, at: 0)
+    }
 
     // MARK: - Ring path
 
@@ -77,6 +101,5 @@ final class ColorCollectionViewCell: UICollectionViewCell {
                           endAngle: CGFloat(61/36 * Double.pi),
                           clockwise: true)
         return bezierPath
-
     }
 }

@@ -45,7 +45,8 @@ final class EditNoteViewController: UIViewController {
     private var colorsDataSource: [ColorCellModel] = [
         ColorCellModel(color: .white, isSelected: true),
         ColorCellModel(color: .red, isSelected: false),
-        ColorCellModel(color: .green, isSelected: false)
+        ColorCellModel(color: .green, isSelected: false),
+        ColorCellModel(color: .clear, isSelected: false),
     ]
     private var lastSelectedColorIndex = 0
 
