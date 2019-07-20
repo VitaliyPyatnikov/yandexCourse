@@ -3,12 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		21009724D4FAB8660BB12F0D /* libPods-Yandex CourseTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D65FEABD7EDB2194C9EEF5AC /* libPods-Yandex CourseTests.a */; };
 		366F5F6C93A8CF7D6C60C698 /* libPods-Yandex Course.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 42354E72F35BBA845562E7C3 /* libPods-Yandex Course.a */; };
+		EB05969D22E317890050E16A /* EditNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB05969C22E317890050E16A /* EditNoteViewController.swift */; };
+		EB05969E22E317890050E16A /* EditNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB05969C22E317890050E16A /* EditNoteViewController.swift */; };
+		EB0596A022E317D80050E16A /* EditNote.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB05969F22E317D80050E16A /* EditNote.storyboard */; };
 		EB38F3E122E2084D007E07D2 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB38F3E022E2084D007E07D2 /* Log.swift */; };
 		EB38F3E222E2084D007E07D2 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB38F3E022E2084D007E07D2 /* Log.swift */; };
 		EB868DA322DC776E0089FE7D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB868DA222DC776E0089FE7D /* AppDelegate.swift */; };
@@ -44,6 +47,8 @@
 		8925195AFCE584E06361CB1A /* Pods-Yandex Course.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yandex Course.release.xcconfig"; path = "Target Support Files/Pods-Yandex Course/Pods-Yandex Course.release.xcconfig"; sourceTree = "<group>"; };
 		C7D54DF4FACC6FB71F72B80C /* Pods-Yandex Course.testing.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yandex Course.testing.xcconfig"; path = "Target Support Files/Pods-Yandex Course/Pods-Yandex Course.testing.xcconfig"; sourceTree = "<group>"; };
 		D65FEABD7EDB2194C9EEF5AC /* libPods-Yandex CourseTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Yandex CourseTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB05969C22E317890050E16A /* EditNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EditNoteViewController.swift; path = "../../../../../../../../../../System/Volumes/Data/Users/vitaliypyatnikov/Documents/Develop/swift/stepik/YandexCourse/YandexCourse/Yandex Course/EditNote/EditNoteViewController.swift"; sourceTree = "<group>"; };
+		EB05969F22E317D80050E16A /* EditNote.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = EditNote.storyboard; path = "../../../../../../../../../../System/Volumes/Data/Users/vitaliypyatnikov/Documents/Develop/swift/stepik/YandexCourse/YandexCourse/Yandex Course/EditNote/EditNote.storyboard"; sourceTree = "<group>"; };
 		EB38F3E022E2084D007E07D2 /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Log.swift; path = "../../../../../../../../../../System/Volumes/Data/Users/vitaliypyatnikov/Documents/Develop/swift/stepik/YandexCourse/YandexCourse/Yandex Course/Helpers/Log.swift"; sourceTree = "<group>"; };
 		EB868D9F22DC776E0089FE7D /* Yandex Course.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Yandex Course.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB868DA222DC776E0089FE7D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -106,6 +111,15 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		EB05969522E311C60050E16A /* EditNote */ = {
+			isa = PBXGroup;
+			children = (
+				EB05969C22E317890050E16A /* EditNoteViewController.swift */,
+				EB05969F22E317D80050E16A /* EditNote.storyboard */,
+			);
+			path = EditNote;
+			sourceTree = "<group>";
+		};
 		EB38F3DF22E2083C007E07D2 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -139,6 +153,7 @@
 			children = (
 				EB38F3DF22E2083C007E07D2 /* Helpers */,
 				EB868DC622DC778F0089FE7D /* Model */,
+				EB05969522E311C60050E16A /* EditNote */,
 				EB868DA222DC776E0089FE7D /* AppDelegate.swift */,
 				EB868DA422DC776E0089FE7D /* ViewController.swift */,
 				EB868DA622DC776E0089FE7D /* Main.storyboard */,
@@ -271,6 +286,7 @@
 			files = (
 				EB868DAD22DC776F0089FE7D /* LaunchScreen.storyboard in Resources */,
 				EB868DAA22DC776F0089FE7D /* Assets.xcassets in Resources */,
+				EB0596A022E317D80050E16A /* EditNote.storyboard in Resources */,
 				EB868DA822DC776E0089FE7D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -339,6 +355,7 @@
 				EB868DD022DC778F0089FE7D /* FileNotebook.swift in Sources */,
 				EB868DA522DC776E0089FE7D /* ViewController.swift in Sources */,
 				EB38F3E122E2084D007E07D2 /* Log.swift in Sources */,
+				EB05969D22E317890050E16A /* EditNoteViewController.swift in Sources */,
 				EB868DCC22DC778F0089FE7D /* NoteExtension.swift in Sources */,
 				EB868DA322DC776E0089FE7D /* AppDelegate.swift in Sources */,
 				EB868DCE22DC778F0089FE7D /* Note.swift in Sources */,
@@ -351,6 +368,7 @@
 			files = (
 				EB868DD122DC778F0089FE7D /* FileNotebook.swift in Sources */,
 				EB38F3E222E2084D007E07D2 /* Log.swift in Sources */,
+				EB05969E22E317890050E16A /* EditNoteViewController.swift in Sources */,
 				EB868DCF22DC778F0089FE7D /* Note.swift in Sources */,
 				EB868DC522DC77820089FE7D /* NoteTests.swift in Sources */,
 				EB868DCD22DC778F0089FE7D /* NoteExtension.swift in Sources */,
