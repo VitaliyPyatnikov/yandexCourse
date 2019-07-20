@@ -29,12 +29,12 @@ final class EditNoteViewController: UIViewController {
     @IBAction func destroyDateSwithcTapped(_ sender: UISwitch) {
         updateUI()
     }
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         initialSetup()
         setupCollectionView()
+        setupLongGestureRecognizer()
     }
 
     // MARK: - Private
@@ -49,10 +49,19 @@ final class EditNoteViewController: UIViewController {
         ColorCellModel(color: .clear, isSelected: false),
     ]
     private var lastSelectedColorIndex = 0
+    private var gestureRecognizer: UILongPressGestureRecognizer?
 
     private func initialSetup() {
         descriptionTextView.delegate = self
         descriptionTextView.isScrollEnabled = false
+    }
+    private func setupLongGestureRecognizer() {
+        let gestureRecognizer = UILongPressGestureRecognizer(target: self,
+                                                         action: #selector(handleLongPress))
+        gestureRecognizer.minimumPressDuration = 0.5
+        gestureRecognizer.delaysTouchesBegan = true
+        colorsCollectionView.addGestureRecognizer(gestureRecognizer)
+        self.gestureRecognizer = gestureRecognizer
     }
     private func updateUI() {
         let destroyPickerContainerHeight = destroyDateSwitch.isOn ? defaultPickerHeight : CGFloat(0)
@@ -83,6 +92,20 @@ final class EditNoteViewController: UIViewController {
         colorsDataSource[index] = ColorCellModel(color: newSelectedColor.color,
                                                  isSelected: true)
         colorsCollectionView.reloadData()
+    }
+    @objc private func handleLongPress(gesture : UILongPressGestureRecognizer) {
+        if gesture.state != .ended {
+            return
+        }
+
+        let point = gesture.location(in: colorsCollectionView)
+
+        if let indexPath = colorsCollectionView.indexPathForItem(at: point),
+            indexPath.row == colorsDataSource.count - 1 {
+            /// Open new module
+        } else {
+            Log.error("Incorrect point")
+        }
     }
 }
 
