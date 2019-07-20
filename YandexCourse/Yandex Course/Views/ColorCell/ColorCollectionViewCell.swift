@@ -58,6 +58,8 @@ final class ColorCollectionViewCell: UICollectionViewCell {
     }
 
     private func ringCheckboxPath(with parentView: UIView) -> UIBezierPath {
+        // TODO: - Add more accurate calculations
+
         let bezierPath = UIBezierPath()
         let width = parentView.bounds.width
         let height = parentView.bounds.height

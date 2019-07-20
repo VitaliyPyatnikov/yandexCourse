@@ -70,6 +70,7 @@ final class EditNoteViewController: UIViewController {
         colorsCollectionView.contentInsetAdjustmentBehavior = .always
         
         let nib = UINib(nibName: "ColorCollectionViewCell", bundle: nil)
+        // TODO: - Add typeName to ColorCollectionViewCell
         colorsCollectionView.register(nib, forCellWithReuseIdentifier: "ColorCell")
     }
     private func updateSelectedColor(at index: Int) {
@@ -113,6 +114,7 @@ extension EditNoteViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView,
                         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 
+        // TODO: - Add typeName to ColorCollectionViewCell
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ColorCell",
                                                             for: indexPath)
             as? ColorCollectionViewCell else {
