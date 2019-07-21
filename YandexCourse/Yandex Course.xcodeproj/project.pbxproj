@@ -177,13 +177,12 @@
 		EB868DA122DC776E0089FE7D /* Yandex Course */ = {
 			isa = PBXGroup;
 			children = (
+				EBF8B33922E46A270057F630 /* Screens */,
 				EB38F3DF22E2083C007E07D2 /* Helpers */,
 				EB868DC622DC778F0089FE7D /* Model */,
 				EB7FBB4822E34B7D00E440E7 /* Views */,
 				EB05969522E311C60050E16A /* EditNote */,
 				EB868DA222DC776E0089FE7D /* AppDelegate.swift */,
-				EB868DA422DC776E0089FE7D /* ViewController.swift */,
-				EB868DA622DC776E0089FE7D /* Main.storyboard */,
 				EB868DA922DC776F0089FE7D /* Assets.xcassets */,
 				EB868DAB22DC776F0089FE7D /* LaunchScreen.storyboard */,
 				EB868DAE22DC776F0089FE7D /* Info.plist */,
@@ -227,6 +226,23 @@
 				EB868DCA22DC778F0089FE7D /* Note.swift */,
 			);
 			path = Note;
+			sourceTree = "<group>";
+		};
+		EBF8B33922E46A270057F630 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				EBF8B33A22E46A2F0057F630 /* Main */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		EBF8B33A22E46A2F0057F630 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				EB868DA422DC776E0089FE7D /* ViewController.swift */,
+				EB868DA622DC776E0089FE7D /* Main.storyboard */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
