@@ -36,6 +36,13 @@ final class EditNoteViewController: UIViewController {
         setupCollectionView()
         setupLongGestureRecognizer()
     }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ColorPickerSegue" {
+            guard let _ = segue.destination as? ColorPickerViewController else {
+                return
+            }
+        }
+    }
 
     // MARK: - Private
 
@@ -102,7 +109,7 @@ final class EditNoteViewController: UIViewController {
 
         if let indexPath = colorsCollectionView.indexPathForItem(at: point),
             indexPath.row == colorsDataSource.count - 1 {
-            /// Open new module
+            performSegue(withIdentifier: "ColorPickerSegue", sender: self)
         } else {
             Log.error("Incorrect point")
         }
