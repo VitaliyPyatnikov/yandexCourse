@@ -12,6 +12,19 @@ import UIKit
 
 final class ColorPickerViewController: UIViewController {
 
+    // MARK: - IBOutlets
+
+    @IBOutlet weak var colorPlaceholderView: UIView!
+    @IBOutlet weak var colorView: UIView!
+    @IBOutlet weak var colorLabel: UILabel!
+    @IBOutlet weak var colorImageView: UIImageView!
+    @IBOutlet weak var brightnessSlider: UISlider!
+
+    // MARK: - IBActions
+
+    @IBAction func brightnessSliderMoved(_ sender: UISlider) {
+    }
+
     @IBAction func doneTapped(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
     }
