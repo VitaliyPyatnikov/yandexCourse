@@ -35,21 +35,52 @@ final class ColorPickerViewController: UIViewController {
         setupSlider()
         setupColorView()
     }
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        if let touch = touches.first {
+            updateUI(withTouch: touch)
+        }
+    }
+    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        if let touch = touches.first {
+            updateUI(withTouch: touch)
+        }
+    }
+
 
     // MARK: - Private
+
     /// Identifies spectre lines direction
     private var hueHorizontal = true
     private var colorSelectionView: UIView = UIView()
     private var selectionViewConstraintX: NSLayoutConstraint = NSLayoutConstraint()
     private var selectionViewConstraintY: NSLayoutConstraint = NSLayoutConstraint()
 
+    private func updateUI(withTouch touch: UITouch) {
+        let point = touch.location(in: colorImageView)
+        if colorImageView.point(inside: point, with: nil) {
+            updatePositionOfSelectorView(withPoint: point)
+            let color = getColor(at: point)
+            updateColorSelectionBackgroundColor(with: color)
+            updateColorView(with: color)
+        }
+    }
+    private func updateColorView(with color: UIColor) {
+        colorView.backgroundColor = color
+        let colorHexValue = color.hexValue()
+        colorLabel.text = colorHexValue
+    }
     private func setupSlider() {
         brightnessSlider.value = 1.0
     }
     private func setupColorView() {
         colorPlaceholderView.layer.cornerRadius = 5.0
+        colorView.layer.cornerRadius = 5.0
         colorPlaceholderView.layer.borderWidth = 1.0
         colorPlaceholderView.layer.borderColor = UIColor.black.cgColor
+        colorView.layer.borderWidth = 1.0
+        colorView.layer.borderColor = UIColor.black.cgColor
         colorPlaceholderView.backgroundColor = .white
         let color = getColor(at: CGPoint(x: 0, y: 0))
         colorView.backgroundColor = color
@@ -63,8 +94,7 @@ final class ColorPickerViewController: UIViewController {
         let size = colorImageView.bounds.size
         colorImageView.image = foregroundImage(with: size)
     }
-    private func updateColorSelectionBackgroundColor(at point: CGPoint) {
-        let color = getColor(at: point)
+    private func updateColorSelectionBackgroundColor(with color: UIColor) {
         colorSelectionView.backgroundColor = color
     }
     private func getColor(at point: CGPoint) -> UIColor {
