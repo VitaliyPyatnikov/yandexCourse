@@ -53,7 +53,7 @@ final class EditNoteViewController: UIViewController {
         ColorCellModel(color: .white, isSelected: true),
         ColorCellModel(color: .red, isSelected: false),
         ColorCellModel(color: .green, isSelected: false),
-        ColorCellModel(color: .clear, isSelected: false),
+        ColorCellModel(color: .custom(color: .clear), isSelected: false)
     ]
     private var lastSelectedColorIndex = 0
     private var gestureRecognizer: UILongPressGestureRecognizer?

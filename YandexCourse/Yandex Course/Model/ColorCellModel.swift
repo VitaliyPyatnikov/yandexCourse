@@ -11,6 +11,28 @@ import UIKit
 // MARK: - ColorCellModel
 
 struct ColorCellModel {
-    let color: UIColor
+    let color: NoteColor
     let isSelected: Bool
+}
+
+// MARK: - NoteColor
+
+enum NoteColor: Equatable {
+    case white
+    case red
+    case green
+    case custom(color: UIColor)
+
+    var savedColor: UIColor {
+        switch self {
+        case .white:
+            return .white
+        case .red:
+            return .red
+        case .green:
+            return .green
+        case .custom(let color):
+            return color
+        }
+    }
 }
