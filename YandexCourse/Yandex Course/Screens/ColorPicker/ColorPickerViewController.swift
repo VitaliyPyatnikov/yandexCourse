@@ -32,6 +32,7 @@ final class ColorPickerViewController: UIViewController {
         super.viewDidLoad()
         colorizeImageView()
         setupColorSelectionView()
+        setupSlider()
     }
 
     // MARK: - Private
@@ -41,6 +42,9 @@ final class ColorPickerViewController: UIViewController {
     private var selectionViewConstraintX: NSLayoutConstraint = NSLayoutConstraint()
     private var selectionViewConstraintY: NSLayoutConstraint = NSLayoutConstraint()
 
+    private func setupSlider() {
+        brightnessSlider.value = 1.0
+    }
     // MARK: - Color Image view
 
     private func colorizeImageView() {
