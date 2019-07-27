@@ -33,6 +33,7 @@ final class ColorPickerViewController: UIViewController {
         colorizeImageView()
         setupColorSelectionView()
         setupSlider()
+        setupColorView()
     }
 
     // MARK: - Private
@@ -45,11 +46,34 @@ final class ColorPickerViewController: UIViewController {
     private func setupSlider() {
         brightnessSlider.value = 1.0
     }
+    private func setupColorView() {
+        colorPlaceholderView.layer.cornerRadius = 5.0
+        colorPlaceholderView.layer.borderWidth = 1.0
+        colorPlaceholderView.layer.borderColor = UIColor.black.cgColor
+        colorPlaceholderView.backgroundColor = .white
+        let color = getColor(at: CGPoint(x: 0, y: 0))
+        colorView.backgroundColor = color
+        let colorHexValue = color.hexValue()
+        colorLabel.text = colorHexValue
+    }
+
     // MARK: - Color Image view
 
     private func colorizeImageView() {
         let size = colorImageView.bounds.size
         colorImageView.image = foregroundImage(with: size)
+    }
+    private func updateColorSelectionBackgroundColor(at point: CGPoint) {
+        let color = getColor(at: point)
+        colorSelectionView.backgroundColor = color
+    }
+    private func getColor(at point: CGPoint) -> UIColor {
+        let (hue, saturation) = hueAndSaturation(at: point, size: colorImageView.bounds.size)
+        let brightness = CGFloat(brightnessSlider.value)
+        return UIColor(hue: hue,
+                       saturation: saturation,
+                       brightness: brightness,
+                       alpha: 1.0)
     }
 
     /// Colorize image view
