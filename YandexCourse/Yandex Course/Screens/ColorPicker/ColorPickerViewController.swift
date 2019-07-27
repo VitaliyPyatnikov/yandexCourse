@@ -23,16 +23,19 @@ final class ColorPickerViewController: UIViewController {
     // MARK: - IBActions
 
     @IBAction func brightnessSliderMoved(_ sender: UISlider) {
+        colorizeImageView()
+        let currentPoint = CGPoint(x: selectionViewConstraintX.constant,
+                                   y: selectionViewConstraintY.constant)
+        updateUI(at: currentPoint)
     }
-
     @IBAction func doneTapped(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupSlider()
         colorizeImageView()
         setupColorSelectionView()
-        setupSlider()
         setupColorView()
     }
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -48,7 +51,6 @@ final class ColorPickerViewController: UIViewController {
         }
     }
 
-
     // MARK: - Private
 
     /// Identifies spectre lines direction
@@ -59,6 +61,9 @@ final class ColorPickerViewController: UIViewController {
 
     private func updateUI(withTouch touch: UITouch) {
         let point = touch.location(in: colorImageView)
+        updateUI(at: point)
+    }
+    private func updateUI(at point: CGPoint) {
         if colorImageView.point(inside: point, with: nil) {
             updatePositionOfSelectorView(withPoint: point)
             let color = getColor(at: point)
@@ -114,8 +119,10 @@ final class ColorPickerViewController: UIViewController {
         for i in 0 ..< intWidth {
             for j in 0 ..< intHeight {
                 let index = 4 * (i + j * intWidth)
-                let (hue, saturation) = hueAndSaturation(at: CGPoint(x: i, y: j), size: size) // rendering image transforms it as it it was mirrored around x = -y axis - adjusting for it by switching i and j here
-                let (r, g, b) = UIColor.rgbFrom(hue: hue, saturation: saturation, brightness: 1)
+                // rendering image transforms it as it it was mirrored around x = -y axis - adjusting for it by switching i and j here
+                let (hue, saturation) = hueAndSaturation(at: CGPoint(x: i, y: j), size: size)
+                let brightness = CGFloat(brightnessSlider.value)
+                let (r, g, b) = UIColor.rgbFrom(hue: hue, saturation: saturation, brightness: brightness)
                 imageData[index] = UIColor.getUInt8Value(fromColorComponent: r)
                 imageData[index + 1] = UIColor.getUInt8Value(fromColorComponent: g)
                 imageData[index + 2] = UIColor.getUInt8Value(fromColorComponent: b)
