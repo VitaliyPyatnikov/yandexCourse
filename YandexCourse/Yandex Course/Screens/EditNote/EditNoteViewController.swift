@@ -71,7 +71,7 @@ final class EditNoteViewController: UIViewController {
     }
     private func setupLongGestureRecognizer() {
         let gestureRecognizer = UILongPressGestureRecognizer(target: self,
-                                                         action: #selector(handleLongPress))
+                                                             action: #selector(handleLongPress))
         gestureRecognizer.minimumPressDuration = 0.5
         gestureRecognizer.delaysTouchesBegan = true
         colorsCollectionView.addGestureRecognizer(gestureRecognizer)
@@ -148,7 +148,6 @@ extension EditNoteViewController: UICollectionViewDataSource {
                         numberOfItemsInSection section: Int) -> Int {
         return colorsDataSource.count
     }
-
     func collectionView(_ collectionView: UICollectionView,
                         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 
