@@ -143,6 +143,8 @@ extension EditNoteViewController: UICollectionViewDelegate {
     }
 }
 
+// MARK: - UICollectionViewDataSource
+
 extension EditNoteViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView,
                         numberOfItemsInSection section: Int) -> Int {
