@@ -8,6 +8,12 @@
 
 import UIKit
 
+// MARK: - EditNoteColorWorker
+
+protocol EditNoteColorWorker: class {
+    func setCustomColor(_ color: UIColor)
+}
+
 // MARK: - EditNoteViewController
 
 final class EditNoteViewController: UIViewController {
@@ -38,9 +44,10 @@ final class EditNoteViewController: UIViewController {
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ColorPickerSegue" {
-            guard let _ = segue.destination as? ColorPickerViewController else {
+            guard let colorPickerViewController = segue.destination as? ColorPickerViewController else {
                 return
             }
+            colorPickerViewController.editNoteWorker = self
         }
     }
 
@@ -155,5 +162,16 @@ extension EditNoteViewController: UICollectionViewDataSource {
         cell.setup(withModel: model)
 
         return cell
+    }
+}
+
+// MARK: - EditNoteColorWorker
+
+extension EditNoteViewController: EditNoteColorWorker {
+    func setCustomColor(_ color: UIColor) {
+        let lastIndex = colorsDataSource.count - 1
+        colorsDataSource[lastIndex] = ColorCellModel(color: .custom(color: color),
+                                                     isSelected: false)
+        updateSelectedColor(at: lastIndex)
     }
 }

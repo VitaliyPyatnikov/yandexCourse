@@ -24,10 +24,15 @@ final class ColorCollectionViewCell: UICollectionViewCell {
     func setup(withModel model: ColorCellModel) {
         shapeLayer.removeFromSuperlayer()
         gradientLayer.removeFromSuperlayer()
-        if model.color == .clear {
-            addGradient(to: baseView)
-        } else {
-            baseView.backgroundColor = model.color
+        switch model.color {
+        case .custom(let savedColor):
+            if savedColor == .clear {
+                addGradient(to: baseView)
+            } else {
+                baseView.backgroundColor = model.color.savedColor
+            }
+        default:
+            baseView.backgroundColor = model.color.savedColor
         }
         baseView.layer.borderWidth = CGFloat(1)
         baseView.layer.borderColor = UIColor.black.cgColor

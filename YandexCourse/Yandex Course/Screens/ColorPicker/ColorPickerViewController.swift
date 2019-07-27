@@ -29,8 +29,19 @@ final class ColorPickerViewController: UIViewController {
         updateUI(at: currentPoint)
     }
     @IBAction func doneTapped(_ sender: UIButton) {
+        let currentPoint = CGPoint(x: selectionViewConstraintX.constant,
+                                   y: selectionViewConstraintY.constant)
+        let color = getColor(at: currentPoint)
+        editNoteWorker?.setCustomColor(color)
         dismiss(animated: true, completion: nil)
     }
+
+    // MARK: - Properties
+
+    weak var editNoteWorker: EditNoteColorWorker?
+
+    // MARK: - Life cycle
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setupSlider()
