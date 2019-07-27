@@ -139,6 +139,9 @@ extension EditNoteViewController: UITextViewDelegate {
 extension EditNoteViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView,
                         didSelectItemAt indexPath: IndexPath) {
+        guard indexPath.row != colorsDataSource.count - 1 else {
+            return
+        }
         updateSelectedColor(at: indexPath.row)
     }
 }
