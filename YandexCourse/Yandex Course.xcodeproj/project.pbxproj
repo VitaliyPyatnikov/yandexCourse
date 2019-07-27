@@ -11,6 +11,8 @@
 		366F5F6C93A8CF7D6C60C698 /* libPods-Yandex Course.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 42354E72F35BBA845562E7C3 /* libPods-Yandex Course.a */; };
 		EB38F3E122E2084D007E07D2 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB38F3E022E2084D007E07D2 /* Log.swift */; };
 		EB38F3E222E2084D007E07D2 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB38F3E022E2084D007E07D2 /* Log.swift */; };
+		EB79BF9522EC98C70064A5B5 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB79BF9322EC98C70064A5B5 /* UIImageExtension.swift */; };
+		EB79BF9622EC98C70064A5B5 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB79BF9322EC98C70064A5B5 /* UIImageExtension.swift */; };
 		EB79BF9722EC98C70064A5B5 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB79BF9422EC98C70064A5B5 /* UIColorExtension.swift */; };
 		EB79BF9822EC98C70064A5B5 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB79BF9422EC98C70064A5B5 /* UIColorExtension.swift */; };
 		EB7FBB4C22E34BB400E440E7 /* ColorCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7FBB4A22E34BB400E440E7 /* ColorCollectionViewCell.swift */; };
@@ -61,6 +63,7 @@
 		C7D54DF4FACC6FB71F72B80C /* Pods-Yandex Course.testing.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yandex Course.testing.xcconfig"; path = "Target Support Files/Pods-Yandex Course/Pods-Yandex Course.testing.xcconfig"; sourceTree = "<group>"; };
 		D65FEABD7EDB2194C9EEF5AC /* libPods-Yandex CourseTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Yandex CourseTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB38F3E022E2084D007E07D2 /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Log.swift; path = "../../../../../../../../../../System/Volumes/Data/Users/vitaliypyatnikov/Documents/Develop/swift/stepik/YandexCourse/YandexCourse/Yandex Course/Helpers/Log.swift"; sourceTree = "<group>"; };
+		EB79BF9322EC98C70064A5B5 /* UIImageExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 		EB79BF9422EC98C70064A5B5 /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		EB7FBB4A22E34BB400E440E7 /* ColorCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ColorCollectionViewCell.swift; path = "../../../../../../../../../../../System/Volumes/Data/Users/vitaliypyatnikov/Documents/Develop/swift/stepik/YandexCourse/YandexCourse/Yandex Course/Views/ColorCell/ColorCollectionViewCell.swift"; sourceTree = "<group>"; };
 		EB7FBB4B22E34BB400E440E7 /* ColorCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ColorCollectionViewCell.xib; path = "../../../../../../../../../../../System/Volumes/Data/Users/vitaliypyatnikov/Documents/Develop/swift/stepik/YandexCourse/YandexCourse/Yandex Course/Views/ColorCell/ColorCollectionViewCell.xib"; sourceTree = "<group>"; };
@@ -151,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				EB79BF9422EC98C70064A5B5 /* UIColorExtension.swift */,
+				EB79BF9322EC98C70064A5B5 /* UIImageExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -434,6 +438,7 @@
 				EB868DD022DC778F0089FE7D /* FileNotebook.swift in Sources */,
 				EB868DA522DC776E0089FE7D /* ViewController.swift in Sources */,
 				EB7FBB5122E34ECC00E440E7 /* ColorCellModel.swift in Sources */,
+				EB79BF9522EC98C70064A5B5 /* UIImageExtension.swift in Sources */,
 				EB38F3E122E2084D007E07D2 /* Log.swift in Sources */,
 				EBF8B33F22E46C6A0057F630 /* EditNoteViewController.swift in Sources */,
 				EB868DCC22DC778F0089FE7D /* NoteExtension.swift in Sources */,
@@ -460,6 +465,7 @@
 				EB868DC422DC77820089FE7D /* FileNotebookTest.swift in Sources */,
 				EBF8B34022E46C6A0057F630 /* EditNoteViewController.swift in Sources */,
 				EB868DB822DC776F0089FE7D /* Yandex_CourseTests.swift in Sources */,
+				EB79BF9622EC98C70064A5B5 /* UIImageExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
