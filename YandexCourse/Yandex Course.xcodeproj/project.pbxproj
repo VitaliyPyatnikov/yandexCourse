@@ -39,6 +39,18 @@
 		EB868DCF22DC778F0089FE7D /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB868DCA22DC778F0089FE7D /* Note.swift */; };
 		EB868DD022DC778F0089FE7D /* FileNotebook.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB868DCB22DC778F0089FE7D /* FileNotebook.swift */; };
 		EB868DD122DC778F0089FE7D /* FileNotebook.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB868DCB22DC778F0089FE7D /* FileNotebook.swift */; };
+		EBDE53FB22EE2D4B0096A7B5 /* Root.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBDE53FA22EE2D4B0096A7B5 /* Root.storyboard */; };
+		EBDE53FC22EE2D4B0096A7B5 /* Root.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBDE53FA22EE2D4B0096A7B5 /* Root.storyboard */; };
+		EBDE540222EE2DC20096A7B5 /* NotesNavigation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBDE540122EE2DC20096A7B5 /* NotesNavigation.storyboard */; };
+		EBDE540322EE2DC20096A7B5 /* NotesNavigation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBDE540122EE2DC20096A7B5 /* NotesNavigation.storyboard */; };
+		EBDE540C22EE2E500096A7B5 /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDE540B22EE2E500096A7B5 /* NotesViewController.swift */; };
+		EBDE540D22EE2E500096A7B5 /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDE540B22EE2E500096A7B5 /* NotesViewController.swift */; };
+		EBDE540F22EE2E640096A7B5 /* Notes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBDE540E22EE2E640096A7B5 /* Notes.storyboard */; };
+		EBDE541022EE2E640096A7B5 /* Notes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBDE540E22EE2E640096A7B5 /* Notes.storyboard */; };
+		EBDE541922EE2F390096A7B5 /* Gallery.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBDE541822EE2F390096A7B5 /* Gallery.storyboard */; };
+		EBDE541A22EE2F390096A7B5 /* Gallery.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBDE541822EE2F390096A7B5 /* Gallery.storyboard */; };
+		EBDE541C22EE2F3E0096A7B5 /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDE541B22EE2F3E0096A7B5 /* GalleryViewController.swift */; };
+		EBDE541D22EE2F3E0096A7B5 /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDE541B22EE2F3E0096A7B5 /* GalleryViewController.swift */; };
 		EBF8B33F22E46C6A0057F630 /* EditNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF8B33E22E46C6A0057F630 /* EditNoteViewController.swift */; };
 		EBF8B34022E46C6A0057F630 /* EditNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF8B33E22E46C6A0057F630 /* EditNoteViewController.swift */; };
 		EBF8B34222E46CA60057F630 /* EditNote.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBF8B34122E46CA60057F630 /* EditNote.storyboard */; };
@@ -85,6 +97,12 @@
 		EB868DC922DC778F0089FE7D /* NoteExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteExtension.swift; sourceTree = "<group>"; };
 		EB868DCA22DC778F0089FE7D /* Note.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		EB868DCB22DC778F0089FE7D /* FileNotebook.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileNotebook.swift; sourceTree = "<group>"; };
+		EBDE53FA22EE2D4B0096A7B5 /* Root.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Root.storyboard; sourceTree = "<group>"; };
+		EBDE540122EE2DC20096A7B5 /* NotesNavigation.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = NotesNavigation.storyboard; sourceTree = "<group>"; };
+		EBDE540B22EE2E500096A7B5 /* NotesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotesViewController.swift; sourceTree = "<group>"; };
+		EBDE540E22EE2E640096A7B5 /* Notes.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Notes.storyboard; sourceTree = "<group>"; };
+		EBDE541822EE2F390096A7B5 /* Gallery.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Gallery.storyboard; sourceTree = "<group>"; };
+		EBDE541B22EE2F3E0096A7B5 /* GalleryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
 		EBF8B33E22E46C6A0057F630 /* EditNoteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditNoteViewController.swift; sourceTree = "<group>"; };
 		EBF8B34122E46CA60057F630 /* EditNote.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = EditNote.storyboard; sourceTree = "<group>"; };
 		F2412EAEE9E341A376D53D05 /* Pods-Yandex CourseTests.testing.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yandex CourseTests.testing.xcconfig"; path = "Target Support Files/Pods-Yandex CourseTests/Pods-Yandex CourseTests.testing.xcconfig"; sourceTree = "<group>"; };
@@ -250,9 +268,47 @@
 			path = Note;
 			sourceTree = "<group>";
 		};
+		EBDE53F622EE2D100096A7B5 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				EBDE53FA22EE2D4B0096A7B5 /* Root.storyboard */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		EBDE53FD22EE2D990096A7B5 /* NotesNavigation */ = {
+			isa = PBXGroup;
+			children = (
+				EBDE540122EE2DC20096A7B5 /* NotesNavigation.storyboard */,
+			);
+			path = NotesNavigation;
+			sourceTree = "<group>";
+		};
+		EBDE540422EE2DEC0096A7B5 /* Notes */ = {
+			isa = PBXGroup;
+			children = (
+				EBDE540E22EE2E640096A7B5 /* Notes.storyboard */,
+				EBDE540B22EE2E500096A7B5 /* NotesViewController.swift */,
+			);
+			path = Notes;
+			sourceTree = "<group>";
+		};
+		EBDE541122EE2F0E0096A7B5 /* Gallery */ = {
+			isa = PBXGroup;
+			children = (
+				EBDE541822EE2F390096A7B5 /* Gallery.storyboard */,
+				EBDE541B22EE2F3E0096A7B5 /* GalleryViewController.swift */,
+			);
+			path = Gallery;
+			sourceTree = "<group>";
+		};
 		EBF8B33922E46A270057F630 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				EBDE541122EE2F0E0096A7B5 /* Gallery */,
+				EBDE53F622EE2D100096A7B5 /* Root */,
+				EBDE53FD22EE2D990096A7B5 /* NotesNavigation */,
+				EBDE540422EE2DEC0096A7B5 /* Notes */,
 				EBF8B34422E46D300057F630 /* ColorPicker */,
 				EB05969522E311C60050E16A /* EditNote */,
 				EBF8B33A22E46A2F0057F630 /* Main */,
@@ -362,9 +418,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				EBF8B34222E46CA60057F630 /* EditNote.storyboard in Resources */,
+				EBDE541922EE2F390096A7B5 /* Gallery.storyboard in Resources */,
 				EB868DAD22DC776F0089FE7D /* LaunchScreen.storyboard in Resources */,
+				EBDE540222EE2DC20096A7B5 /* NotesNavigation.storyboard in Resources */,
+				EBDE540F22EE2E640096A7B5 /* Notes.storyboard in Resources */,
 				EB868DAA22DC776F0089FE7D /* Assets.xcassets in Resources */,
 				EB79BFA322ECEE620064A5B5 /* ColorPicker.storyboard in Resources */,
+				EBDE53FB22EE2D4B0096A7B5 /* Root.storyboard in Resources */,
 				EB79BFA722ECEEA40064A5B5 /* ColorCollectionViewCell.xib in Resources */,
 				EB868DA822DC776E0089FE7D /* Main.storyboard in Resources */,
 			);
@@ -374,9 +434,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBDE541A22EE2F390096A7B5 /* Gallery.storyboard in Resources */,
+				EBDE541022EE2E640096A7B5 /* Notes.storyboard in Resources */,
 				EBF8B34322E46CA60057F630 /* EditNote.storyboard in Resources */,
 				EB79BFA822ECEEA40064A5B5 /* ColorCollectionViewCell.xib in Resources */,
+				EBDE53FC22EE2D4B0096A7B5 /* Root.storyboard in Resources */,
 				EB79BFA422ECEE620064A5B5 /* ColorPicker.storyboard in Resources */,
+				EBDE540322EE2DC20096A7B5 /* NotesNavigation.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -435,12 +499,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB868DD022DC778F0089FE7D /* FileNotebook.swift in Sources */,
+				EBDE541C22EE2F3E0096A7B5 /* GalleryViewController.swift in Sources */,
 				EB79BF9A22ECEDC10064A5B5 /* Log.swift in Sources */,
 				EB79BFA122ECEE620064A5B5 /* ColorPickerViewController.swift in Sources */,
 				EB868DA522DC776E0089FE7D /* ViewController.swift in Sources */,
 				EB79BF9522EC98C70064A5B5 /* UIImageExtension.swift in Sources */,
 				EBF8B33F22E46C6A0057F630 /* EditNoteViewController.swift in Sources */,
 				EB79BFA922ECEEA40064A5B5 /* ColorCollectionViewCell.swift in Sources */,
+				EBDE540C22EE2E500096A7B5 /* NotesViewController.swift in Sources */,
 				EB868DCC22DC778F0089FE7D /* NoteExtension.swift in Sources */,
 				EB868DA322DC776E0089FE7D /* AppDelegate.swift in Sources */,
 				EB868DCE22DC778F0089FE7D /* Note.swift in Sources */,
@@ -463,7 +529,9 @@
 				EB79BF9822EC98C70064A5B5 /* UIColorExtension.swift in Sources */,
 				EB868DC422DC77820089FE7D /* FileNotebookTest.swift in Sources */,
 				EBF8B34022E46C6A0057F630 /* EditNoteViewController.swift in Sources */,
+				EBDE540D22EE2E500096A7B5 /* NotesViewController.swift in Sources */,
 				EB79BF9E22ECEDED0064A5B5 /* ColorCellModel.swift in Sources */,
+				EBDE541D22EE2F3E0096A7B5 /* GalleryViewController.swift in Sources */,
 				EB868DB822DC776F0089FE7D /* Yandex_CourseTests.swift in Sources */,
 				EB79BF9622EC98C70064A5B5 /* UIImageExtension.swift in Sources */,
 			);
