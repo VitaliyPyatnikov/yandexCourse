@@ -20,10 +20,21 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="IEq-4A-XO3"/>
                     </view>
+                    <connections>
+                        <segue destination="BMS-kJ-sTr" kind="show" identifier="EditNoteSegue" id="Wx3-55-NZv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nZF-IQ-f0e" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-221" y="25"/>
+        </scene>
+        <!--EditNote-->
+        <scene sceneID="Zhj-ch-ayC">
+            <objects>
+                <viewControllerPlaceholder storyboardName="EditNote" id="BMS-kJ-sTr" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B87-Aw-dB3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="482" y="24"/>
         </scene>
     </scenes>
 </document>
