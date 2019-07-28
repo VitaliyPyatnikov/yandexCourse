@@ -12,16 +12,26 @@ import UIKit
 
 final class NotesViewController: UIViewController {
 
+    // MARK: - IBOutlets
+
+    @IBOutlet weak var tableVIew: UITableView!
+
     // MARK: - Life cycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavigationBar()
+        setupTableView()
     }
 
     // MARK: - Private
 
+    private let fileNotebook: FileNotebookHandler = FileNotebook()
+
     private func setupNavigationBar() {
+        navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .edit,
+                                                           target: self,
+                                                           action: #selector(editMode))
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add,
                                                             target: self,
                                                             action: #selector(addNewNote))
@@ -29,5 +39,41 @@ final class NotesViewController: UIViewController {
     @objc private func addNewNote() {
         performSegue(withIdentifier: "EditNoteSegue", sender: self)
     }
+    @objc private func editMode() {
+    }
+    private func setupTableView() {
+        tableVIew.delegate = self
+        tableVIew.dataSource = self
+        tableVIew.rowHeight = UITableView.automaticDimension
+        tableVIew.estimatedRowHeight = 100
+        let nib = UINib(nibName: "NoteTableViewCell", bundle: nil)
+        tableVIew.register(nib, forCellReuseIdentifier: "NoteCell")
+    }
+
+}
+
+// MARK: - UITableViewDataSource
+
+extension NotesViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return fileNotebook.notes.count
+    }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableVIew.dequeueReusableCell(withIdentifier: "NoteCell", for: indexPath) as? NoteTableViewCell else {
+            return UITableViewCell()
+        }
+        let model = fileNotebook.notes[indexPath.row]
+        let cellModel = NoteCellModel(title: model.title,
+                                      description: model.content,
+                                      color: model.color)
+        cell.setup(with: cellModel)
+
+        return cell
+    }
+}
+
+// MARK: - UITableViewDelegate
+
+extension NotesViewController: UITableViewDelegate {
 
 }

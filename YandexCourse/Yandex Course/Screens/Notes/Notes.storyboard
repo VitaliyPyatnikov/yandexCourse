@@ -17,10 +17,23 @@
                     <view key="view" contentMode="scaleToFill" id="uz6-LV-lNR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WSF-LJ-bUd">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="WSF-LJ-bUd" firstAttribute="top" secondItem="IEq-4A-XO3" secondAttribute="top" id="TRL-nn-zrk"/>
+                            <constraint firstItem="IEq-4A-XO3" firstAttribute="trailing" secondItem="WSF-LJ-bUd" secondAttribute="trailing" id="WeL-gT-ODx"/>
+                            <constraint firstItem="WSF-LJ-bUd" firstAttribute="leading" secondItem="IEq-4A-XO3" secondAttribute="leading" id="Zs9-Fv-qFu"/>
+                            <constraint firstItem="IEq-4A-XO3" firstAttribute="bottom" secondItem="WSF-LJ-bUd" secondAttribute="bottom" id="rfo-oS-6Oo"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="IEq-4A-XO3"/>
                     </view>
                     <connections>
+                        <outlet property="tableVIew" destination="WSF-LJ-bUd" id="mXg-fj-OGy"/>
                         <segue destination="BMS-kJ-sTr" kind="show" identifier="EditNoteSegue" id="Wx3-55-NZv"/>
                     </connections>
                 </viewController>
