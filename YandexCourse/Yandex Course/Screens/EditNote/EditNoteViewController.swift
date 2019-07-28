@@ -19,6 +19,7 @@ protocol EditNoteColorWorker: class {
 final class EditNoteViewController: UIViewController {
 
     // MARK: - IBOutlets
+
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var descriptionTextView: UITextView!
     @IBOutlet weak var destroyDateSwitch: UISwitch!
@@ -36,11 +37,18 @@ final class EditNoteViewController: UIViewController {
         updateUI()
     }
 
+    // MARK: - Properties
+
+    weak var notesWorker: NotesWorker?
+
+    // MARK: - Life cycle
+
     override func viewDidLoad() {
         super.viewDidLoad()
         initialSetup()
         setupCollectionView()
         setupLongGestureRecognizer()
+        setupNavigationBar()
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ColorPickerSegue" {
@@ -120,6 +128,20 @@ final class EditNoteViewController: UIViewController {
         } else {
             Log.error("Incorrect point")
         }
+    }
+    private func setupNavigationBar() {
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .save,
+                                                            target: nil,
+                                                            action: #selector(saveNote))
+    }
+    @objc private func saveNote() {
+        guard let title = titleTextField.text,
+            let content = descriptionTextView.text else {
+            return
+        }
+        let note = Note(title: title, content: content, importance: .usual)
+        notesWorker?.addNew(note)
+        performSegue(withIdentifier: "unwindToNotes", sender: self)
     }
 }
 

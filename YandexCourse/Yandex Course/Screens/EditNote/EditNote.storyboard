@@ -138,9 +138,11 @@
                         <outlet property="destroyDateSwitch" destination="W6h-K0-RVy" id="4HP-G6-n08"/>
                         <outlet property="titleTextField" destination="YY8-n1-fhi" id="b4A-4e-fFg"/>
                         <segue destination="NCb-Or-o09" kind="presentation" identifier="ColorPickerSegue" id="dsR-cX-uvj"/>
+                        <segue destination="UDQ-A7-CGG" kind="unwind" identifier="unwindToNotes" unwindAction="unwindToNotesWithSegue:" id="Sar-IB-7ly"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gbq-NT-6HJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="UDQ-A7-CGG" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-68" y="-114.69265367316342"/>
         </scene>
@@ -150,7 +152,7 @@
                 <viewControllerPlaceholder storyboardName="ColorPicker" id="NCb-Or-o09" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LvH-Wa-xrd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="613" y="-152"/>
+            <point key="canvasLocation" x="604" y="-115"/>
         </scene>
     </scenes>
 </document>

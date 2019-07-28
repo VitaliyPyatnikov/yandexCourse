@@ -8,6 +8,12 @@
 
 import UIKit
 
+// MARK: - NotesWorker
+
+protocol NotesWorker: class {
+    func addNew(_ note: Note)
+}
+
 // MARK: - NotesViewController
 
 final class NotesViewController: UIViewController {
@@ -16,12 +22,24 @@ final class NotesViewController: UIViewController {
 
     @IBOutlet weak var tableVIew: UITableView!
 
+    // MARK: - IBActions
+
+    @IBAction func unwindToNotes(segue: UIStoryboardSegue) { }
+
     // MARK: - Life cycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavigationBar()
         setupTableView()
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "EditNoteSegue" {
+            guard let editNoteViewController = segue.destination as? EditNoteViewController else {
+                return
+            }
+            editNoteViewController.notesWorker = self
+        }
     }
 
     // MARK: - Private
@@ -86,4 +104,13 @@ extension NotesViewController: UITableViewDataSource {
 
 extension NotesViewController: UITableViewDelegate {
 
+}
+
+// MARK: - NotesWorker
+
+extension NotesViewController: NotesWorker {
+    func addNew(_ note: Note) {
+        fileNotebook.add(note)
+        tableVIew.reloadData()
+    }
 }
