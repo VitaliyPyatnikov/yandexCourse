@@ -27,11 +27,15 @@ final class NotesViewController: UIViewController {
     // MARK: - Private
 
     private let fileNotebook: FileNotebookHandler = FileNotebook()
+    private let editBarButton = UIBarButtonItem(barButtonSystemItem: .edit,
+                                                target: self,
+                                                action: #selector(editMode))
+    private let doneBarButton = UIBarButtonItem(barButtonSystemItem: .done,
+                                                target: self,
+                                                action: #selector(editMode))
 
     private func setupNavigationBar() {
-        navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .edit,
-                                                           target: self,
-                                                           action: #selector(editMode))
+        navigationItem.leftBarButtonItem = editBarButton
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add,
                                                             target: self,
                                                             action: #selector(addNewNote))
@@ -40,6 +44,12 @@ final class NotesViewController: UIViewController {
         performSegue(withIdentifier: "EditNoteSegue", sender: self)
     }
     @objc private func editMode() {
+        tableVIew.isEditing.toggle()
+        if tableVIew.isEditing {
+            navigationItem.leftBarButtonItem = doneBarButton
+        } else {
+            navigationItem.leftBarButtonItem = editBarButton
+        }
     }
     private func setupTableView() {
         tableVIew.delegate = self
