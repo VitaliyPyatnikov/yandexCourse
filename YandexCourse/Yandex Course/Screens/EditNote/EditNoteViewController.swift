@@ -139,7 +139,16 @@ final class EditNoteViewController: UIViewController {
             let content = descriptionTextView.text else {
             return
         }
-        let note = Note(title: title, content: content, importance: .usual)
+        var selfDestructionDate: Date? = nil
+        if destroyDateSwitch.isOn {
+            selfDestructionDate = destroyDatePicker.date
+        }
+        let color = colorsDataSource[lastSelectedColorIndex].color.savedColor
+        let note = Note(title: title,
+                        content: content,
+                        importance: .usual,
+                        color: color,
+                        selfDestructionDate: selfDestructionDate)
         notesWorker?.addNew(note)
         performSegue(withIdentifier: "unwindToNotes", sender: self)
     }
