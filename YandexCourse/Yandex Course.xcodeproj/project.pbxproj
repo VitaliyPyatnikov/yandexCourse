@@ -47,6 +47,8 @@
 		EBB613BB22F3719D00A1C1B2 /* GalleryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB613B822F3719D00A1C1B2 /* GalleryCollectionViewCell.swift */; };
 		EBB613BC22F3719D00A1C1B2 /* GalleryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBB613B922F3719D00A1C1B2 /* GalleryCollectionViewCell.xib */; };
 		EBB613BD22F3719D00A1C1B2 /* GalleryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBB613B922F3719D00A1C1B2 /* GalleryCollectionViewCell.xib */; };
+		EBB613C022F37DD600A1C1B2 /* GalleryImagePickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB613BF22F37DD600A1C1B2 /* GalleryImagePickerController.swift */; };
+		EBB613C122F37DD600A1C1B2 /* GalleryImagePickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB613BF22F37DD600A1C1B2 /* GalleryImagePickerController.swift */; };
 		EBDE53FB22EE2D4B0096A7B5 /* Root.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBDE53FA22EE2D4B0096A7B5 /* Root.storyboard */; };
 		EBDE53FC22EE2D4B0096A7B5 /* Root.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBDE53FA22EE2D4B0096A7B5 /* Root.storyboard */; };
 		EBDE540222EE2DC20096A7B5 /* NotesNavigation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBDE540122EE2DC20096A7B5 /* NotesNavigation.storyboard */; };
@@ -115,6 +117,7 @@
 		EBB613B422F36E9A00A1C1B2 /* GalleryNavigation.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GalleryNavigation.storyboard; sourceTree = "<group>"; };
 		EBB613B822F3719D00A1C1B2 /* GalleryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCollectionViewCell.swift; sourceTree = "<group>"; };
 		EBB613B922F3719D00A1C1B2 /* GalleryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GalleryCollectionViewCell.xib; sourceTree = "<group>"; };
+		EBB613BF22F37DD600A1C1B2 /* GalleryImagePickerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryImagePickerController.swift; sourceTree = "<group>"; };
 		EBDE53FA22EE2D4B0096A7B5 /* Root.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Root.storyboard; sourceTree = "<group>"; };
 		EBDE540122EE2DC20096A7B5 /* NotesNavigation.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = NotesNavigation.storyboard; sourceTree = "<group>"; };
 		EBDE540B22EE2E500096A7B5 /* NotesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotesViewController.swift; sourceTree = "<group>"; };
@@ -309,6 +312,14 @@
 			path = GalleryCollectionViewCell;
 			sourceTree = "<group>";
 		};
+		EBB613BE22F37DA900A1C1B2 /* GalleryImagePicker */ = {
+			isa = PBXGroup;
+			children = (
+				EBB613BF22F37DD600A1C1B2 /* GalleryImagePickerController.swift */,
+			);
+			path = GalleryImagePicker;
+			sourceTree = "<group>";
+		};
 		EBDE53F622EE2D100096A7B5 /* Root */ = {
 			isa = PBXGroup;
 			children = (
@@ -356,6 +367,7 @@
 		EBF8B33922E46A270057F630 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				EBB613BE22F37DA900A1C1B2 /* GalleryImagePicker */,
 				EBB613B322F36E7600A1C1B2 /* GalleryNavigation */,
 				EBDE541122EE2F0E0096A7B5 /* Gallery */,
 				EBDE53F622EE2D100096A7B5 /* Root */,
@@ -568,6 +580,7 @@
 				EBF8B33F22E46C6A0057F630 /* EditNoteViewController.swift in Sources */,
 				EB79BFA922ECEEA40064A5B5 /* ColorCollectionViewCell.swift in Sources */,
 				EBDE542722EE34EF0096A7B5 /* NoteTableViewCell.swift in Sources */,
+				EBB613C022F37DD600A1C1B2 /* GalleryImagePickerController.swift in Sources */,
 				EBDE540C22EE2E500096A7B5 /* NotesViewController.swift in Sources */,
 				EB868DCC22DC778F0089FE7D /* NoteExtension.swift in Sources */,
 				EB868DA322DC776E0089FE7D /* AppDelegate.swift in Sources */,
@@ -587,6 +600,7 @@
 				EB868DD122DC778F0089FE7D /* FileNotebook.swift in Sources */,
 				EB868DCF22DC778F0089FE7D /* Note.swift in Sources */,
 				EB79BF9B22ECEDC10064A5B5 /* Log.swift in Sources */,
+				EBB613C122F37DD600A1C1B2 /* GalleryImagePickerController.swift in Sources */,
 				EB868DC522DC77820089FE7D /* NoteTests.swift in Sources */,
 				EB868DCD22DC778F0089FE7D /* NoteExtension.swift in Sources */,
 				EB79BF9822EC98C70064A5B5 /* UIColorExtension.swift in Sources */,

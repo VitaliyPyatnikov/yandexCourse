@@ -8,6 +8,12 @@
 
 import UIKit
 
+// MARK: - GalleryWorker
+
+protocol GalleryWorker: class {
+    func add(image: UIImage)
+}
+
 // MARK: - GalleryViewController
 
 final class GalleryViewController: UIViewController {
@@ -21,11 +27,12 @@ final class GalleryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupCollectionView()
+        setupNavigationBar()
     }
 
     // MARK: - Private
 
-    private let images: [UIImage] = [UIImage]()
+    private var images: [UIImage] = [UIImage]()
     private let inset: CGFloat = 0.5
     private let spaceBetweenCels: CGFloat = 8
     private let cellsPerRow = 4
@@ -35,6 +42,16 @@ final class GalleryViewController: UIViewController {
         collectionView.dataSource = self
         let nib = UINib(nibName: "GalleryCollectionViewCell", bundle: nil)
         collectionView.register(nib, forCellWithReuseIdentifier: "GalleryCollectionViewCell")
+    }
+    private func setupNavigationBar() {
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add,
+                                                            target: self,
+                                                            action: #selector(addNewImage))
+    }
+    @objc private func addNewImage() {
+        let pickerViewController = GalleryImagePickerController()
+        pickerViewController.pickerDelegate = self
+        present(pickerViewController, animated: true, completion: nil)
     }
 }
 
@@ -80,5 +97,14 @@ extension GalleryViewController: UICollectionViewDelegateFlowLayout {
         let marginsAndInsets = inset * 2 + safeAreaInsetsSum + spaceBetweenCels * CGFloat(cellsPerRow - 1)
         let itemWidth = ((collectionView.bounds.size.width - marginsAndInsets) / CGFloat(cellsPerRow))
         return CGSize(width: itemWidth, height: itemWidth)
+    }
+}
+
+// MARK: - GalleryWorker
+
+extension GalleryViewController: GalleryWorker {
+    func add(image: UIImage) {
+        images.append(image)
+        collectionView.reloadData()
     }
 }
