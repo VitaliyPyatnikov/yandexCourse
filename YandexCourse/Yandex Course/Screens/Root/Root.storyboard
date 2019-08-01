@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Tab Bar Controller-->
+        <!--Root View Controller-->
         <scene sceneID="A7q-zM-4Lh">
             <objects>
-                <tabBarController id="Waz-yj-tfS" sceneMemberID="viewController">
+                <tabBarController id="Waz-yj-tfS" customClass="RootViewController" customModule="Yandex_Course" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="7S9-Ff-yL2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -37,10 +37,10 @@
             </objects>
             <point key="canvasLocation" x="-256" y="-364"/>
         </scene>
-        <!--Gallery-->
+        <!--GalleryNavigation-->
         <scene sceneID="OFB-RZ-LOm">
             <objects>
-                <viewControllerPlaceholder storyboardName="Gallery" id="69m-dZ-H0N" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="GalleryNavigation" id="69m-dZ-H0N" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="Azs-aM-7Zo"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="90P-O3-eel" userLabel="First Responder" sceneMemberID="firstResponder"/>

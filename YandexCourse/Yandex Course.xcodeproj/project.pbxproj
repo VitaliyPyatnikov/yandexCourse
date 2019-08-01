@@ -39,6 +39,8 @@
 		EB868DCF22DC778F0089FE7D /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB868DCA22DC778F0089FE7D /* Note.swift */; };
 		EB868DD022DC778F0089FE7D /* FileNotebook.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB868DCB22DC778F0089FE7D /* FileNotebook.swift */; };
 		EB868DD122DC778F0089FE7D /* FileNotebook.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB868DCB22DC778F0089FE7D /* FileNotebook.swift */; };
+		EBB613B122F3694A00A1C1B2 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB613B022F3694A00A1C1B2 /* RootViewController.swift */; };
+		EBB613B222F3694A00A1C1B2 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB613B022F3694A00A1C1B2 /* RootViewController.swift */; };
 		EBB613B522F36E9A00A1C1B2 /* GalleryNavigation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBB613B422F36E9A00A1C1B2 /* GalleryNavigation.storyboard */; };
 		EBB613B622F36E9A00A1C1B2 /* GalleryNavigation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBB613B422F36E9A00A1C1B2 /* GalleryNavigation.storyboard */; };
 		EBDE53FB22EE2D4B0096A7B5 /* Root.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBDE53FA22EE2D4B0096A7B5 /* Root.storyboard */; };
@@ -105,6 +107,7 @@
 		EB868DC922DC778F0089FE7D /* NoteExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteExtension.swift; sourceTree = "<group>"; };
 		EB868DCA22DC778F0089FE7D /* Note.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		EB868DCB22DC778F0089FE7D /* FileNotebook.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileNotebook.swift; sourceTree = "<group>"; };
+		EBB613B022F3694A00A1C1B2 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		EBB613B422F36E9A00A1C1B2 /* GalleryNavigation.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GalleryNavigation.storyboard; sourceTree = "<group>"; };
 		EBDE53FA22EE2D4B0096A7B5 /* Root.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Root.storyboard; sourceTree = "<group>"; };
 		EBDE540122EE2DC20096A7B5 /* NotesNavigation.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = NotesNavigation.storyboard; sourceTree = "<group>"; };
@@ -294,6 +297,7 @@
 			isa = PBXGroup;
 			children = (
 				EBDE53FA22EE2D4B0096A7B5 /* Root.storyboard */,
+				EBB613B022F3694A00A1C1B2 /* RootViewController.swift */,
 			);
 			path = Root;
 			sourceTree = "<group>";
@@ -535,6 +539,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB868DD022DC778F0089FE7D /* FileNotebook.swift in Sources */,
+				EBB613B122F3694A00A1C1B2 /* RootViewController.swift in Sources */,
 				EBDE541C22EE2F3E0096A7B5 /* GalleryViewController.swift in Sources */,
 				EB79BF9A22ECEDC10064A5B5 /* Log.swift in Sources */,
 				EB79BFA122ECEE620064A5B5 /* ColorPickerViewController.swift in Sources */,
@@ -559,6 +564,7 @@
 			files = (
 				EB79BFA222ECEE620064A5B5 /* ColorPickerViewController.swift in Sources */,
 				EB79BFAA22ECEEA40064A5B5 /* ColorCollectionViewCell.swift in Sources */,
+				EBB613B222F3694A00A1C1B2 /* RootViewController.swift in Sources */,
 				EB868DD122DC778F0089FE7D /* FileNotebook.swift in Sources */,
 				EB868DCF22DC778F0089FE7D /* Note.swift in Sources */,
 				EB79BF9B22ECEDC10064A5B5 /* Log.swift in Sources */,
