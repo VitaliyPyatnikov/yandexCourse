@@ -43,6 +43,10 @@
 		EBB613B222F3694A00A1C1B2 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB613B022F3694A00A1C1B2 /* RootViewController.swift */; };
 		EBB613B522F36E9A00A1C1B2 /* GalleryNavigation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBB613B422F36E9A00A1C1B2 /* GalleryNavigation.storyboard */; };
 		EBB613B622F36E9A00A1C1B2 /* GalleryNavigation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBB613B422F36E9A00A1C1B2 /* GalleryNavigation.storyboard */; };
+		EBB613BA22F3719D00A1C1B2 /* GalleryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB613B822F3719D00A1C1B2 /* GalleryCollectionViewCell.swift */; };
+		EBB613BB22F3719D00A1C1B2 /* GalleryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB613B822F3719D00A1C1B2 /* GalleryCollectionViewCell.swift */; };
+		EBB613BC22F3719D00A1C1B2 /* GalleryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBB613B922F3719D00A1C1B2 /* GalleryCollectionViewCell.xib */; };
+		EBB613BD22F3719D00A1C1B2 /* GalleryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBB613B922F3719D00A1C1B2 /* GalleryCollectionViewCell.xib */; };
 		EBDE53FB22EE2D4B0096A7B5 /* Root.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBDE53FA22EE2D4B0096A7B5 /* Root.storyboard */; };
 		EBDE53FC22EE2D4B0096A7B5 /* Root.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBDE53FA22EE2D4B0096A7B5 /* Root.storyboard */; };
 		EBDE540222EE2DC20096A7B5 /* NotesNavigation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBDE540122EE2DC20096A7B5 /* NotesNavigation.storyboard */; };
@@ -109,6 +113,8 @@
 		EB868DCB22DC778F0089FE7D /* FileNotebook.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileNotebook.swift; sourceTree = "<group>"; };
 		EBB613B022F3694A00A1C1B2 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		EBB613B422F36E9A00A1C1B2 /* GalleryNavigation.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GalleryNavigation.storyboard; sourceTree = "<group>"; };
+		EBB613B822F3719D00A1C1B2 /* GalleryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCollectionViewCell.swift; sourceTree = "<group>"; };
+		EBB613B922F3719D00A1C1B2 /* GalleryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GalleryCollectionViewCell.xib; sourceTree = "<group>"; };
 		EBDE53FA22EE2D4B0096A7B5 /* Root.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Root.storyboard; sourceTree = "<group>"; };
 		EBDE540122EE2DC20096A7B5 /* NotesNavigation.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = NotesNavigation.storyboard; sourceTree = "<group>"; };
 		EBDE540B22EE2E500096A7B5 /* NotesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotesViewController.swift; sourceTree = "<group>"; };
@@ -195,6 +201,7 @@
 		EB7FBB4822E34B7D00E440E7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				EBB613B722F3717F00A1C1B2 /* GalleryCollectionViewCell */,
 				EBDE541E22EE34B30096A7B5 /* NoteCell */,
 				EB7FBB4922E34B8D00E440E7 /* ColorCell */,
 			);
@@ -291,6 +298,15 @@
 				EBB613B422F36E9A00A1C1B2 /* GalleryNavigation.storyboard */,
 			);
 			path = GalleryNavigation;
+			sourceTree = "<group>";
+		};
+		EBB613B722F3717F00A1C1B2 /* GalleryCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				EBB613B822F3719D00A1C1B2 /* GalleryCollectionViewCell.swift */,
+				EBB613B922F3719D00A1C1B2 /* GalleryCollectionViewCell.xib */,
+			);
+			path = GalleryCollectionViewCell;
 			sourceTree = "<group>";
 		};
 		EBDE53F622EE2D100096A7B5 /* Root */ = {
@@ -457,6 +473,7 @@
 				EBDE541922EE2F390096A7B5 /* Gallery.storyboard in Resources */,
 				EB868DAD22DC776F0089FE7D /* LaunchScreen.storyboard in Resources */,
 				EBB613B522F36E9A00A1C1B2 /* GalleryNavigation.storyboard in Resources */,
+				EBB613BC22F3719D00A1C1B2 /* GalleryCollectionViewCell.xib in Resources */,
 				EBDE540222EE2DC20096A7B5 /* NotesNavigation.storyboard in Resources */,
 				EBDE540F22EE2E640096A7B5 /* Notes.storyboard in Resources */,
 				EBDE542922EE34EF0096A7B5 /* NoteTableViewCell.xib in Resources */,
@@ -475,6 +492,7 @@
 				EBDE541A22EE2F390096A7B5 /* Gallery.storyboard in Resources */,
 				EBDE541022EE2E640096A7B5 /* Notes.storyboard in Resources */,
 				EBF8B34322E46CA60057F630 /* EditNote.storyboard in Resources */,
+				EBB613BD22F3719D00A1C1B2 /* GalleryCollectionViewCell.xib in Resources */,
 				EBB613B622F36E9A00A1C1B2 /* GalleryNavigation.storyboard in Resources */,
 				EB79BFA822ECEEA40064A5B5 /* ColorCollectionViewCell.xib in Resources */,
 				EBDE53FC22EE2D4B0096A7B5 /* Root.storyboard in Resources */,
@@ -545,6 +563,7 @@
 				EB79BFA122ECEE620064A5B5 /* ColorPickerViewController.swift in Sources */,
 				EB868DA522DC776E0089FE7D /* ViewController.swift in Sources */,
 				EBDE542F22EE39B50096A7B5 /* NoteCellModel.swift in Sources */,
+				EBB613BA22F3719D00A1C1B2 /* GalleryCollectionViewCell.swift in Sources */,
 				EB79BF9522EC98C70064A5B5 /* UIImageExtension.swift in Sources */,
 				EBF8B33F22E46C6A0057F630 /* EditNoteViewController.swift in Sources */,
 				EB79BFA922ECEEA40064A5B5 /* ColorCollectionViewCell.swift in Sources */,
@@ -577,6 +596,7 @@
 				EBDE542822EE34EF0096A7B5 /* NoteTableViewCell.swift in Sources */,
 				EB79BF9E22ECEDED0064A5B5 /* ColorCellModel.swift in Sources */,
 				EBDE541D22EE2F3E0096A7B5 /* GalleryViewController.swift in Sources */,
+				EBB613BB22F3719D00A1C1B2 /* GalleryCollectionViewCell.swift in Sources */,
 				EB868DB822DC776F0089FE7D /* Yandex_CourseTests.swift in Sources */,
 				EBDE543022EE39B50096A7B5 /* NoteCellModel.swift in Sources */,
 				EB79BF9622EC98C70064A5B5 /* UIImageExtension.swift in Sources */,
