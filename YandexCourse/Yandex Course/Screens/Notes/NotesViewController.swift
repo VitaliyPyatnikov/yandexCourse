@@ -54,6 +54,7 @@ final class NotesViewController: UIViewController {
     private let fileNotebook: FileNotebookHandler = FileNotebook()
 
     private func setupNavigationBar() {
+        title = "Notes"
         setupLeftBarButtonItem(to: .edit)
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add,
                                                             target: self,

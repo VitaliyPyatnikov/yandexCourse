@@ -44,6 +44,7 @@ final class GalleryViewController: UIViewController {
         collectionView.register(nib, forCellWithReuseIdentifier: "GalleryCollectionViewCell")
     }
     private func setupNavigationBar() {
+        title = "Gallery"
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add,
                                                             target: self,
                                                             action: #selector(addNewImage))
