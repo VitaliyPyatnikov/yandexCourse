@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		21009724D4FAB8660BB12F0D /* libPods-Yandex CourseTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D65FEABD7EDB2194C9EEF5AC /* libPods-Yandex CourseTests.a */; };
 		366F5F6C93A8CF7D6C60C698 /* libPods-Yandex Course.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 42354E72F35BBA845562E7C3 /* libPods-Yandex Course.a */; };
+		EB08A21522F384C70057ED10 /* GalleryPreview.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB08A21422F384C70057ED10 /* GalleryPreview.storyboard */; };
+		EB08A21722F384E50057ED10 /* GalleryPreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB08A21622F384E50057ED10 /* GalleryPreviewViewController.swift */; };
+		EB08A21822F384E50057ED10 /* GalleryPreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB08A21622F384E50057ED10 /* GalleryPreviewViewController.swift */; };
 		EB79BF9522EC98C70064A5B5 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB79BF9322EC98C70064A5B5 /* UIImageExtension.swift */; };
 		EB79BF9622EC98C70064A5B5 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB79BF9322EC98C70064A5B5 /* UIImageExtension.swift */; };
 		EB79BF9722EC98C70064A5B5 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB79BF9422EC98C70064A5B5 /* UIColorExtension.swift */; };
@@ -90,6 +93,8 @@
 		8925195AFCE584E06361CB1A /* Pods-Yandex Course.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yandex Course.release.xcconfig"; path = "Target Support Files/Pods-Yandex Course/Pods-Yandex Course.release.xcconfig"; sourceTree = "<group>"; };
 		C7D54DF4FACC6FB71F72B80C /* Pods-Yandex Course.testing.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yandex Course.testing.xcconfig"; path = "Target Support Files/Pods-Yandex Course/Pods-Yandex Course.testing.xcconfig"; sourceTree = "<group>"; };
 		D65FEABD7EDB2194C9EEF5AC /* libPods-Yandex CourseTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Yandex CourseTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB08A21422F384C70057ED10 /* GalleryPreview.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GalleryPreview.storyboard; sourceTree = "<group>"; };
+		EB08A21622F384E50057ED10 /* GalleryPreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryPreviewViewController.swift; sourceTree = "<group>"; };
 		EB79BF9322EC98C70064A5B5 /* UIImageExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 		EB79BF9422EC98C70064A5B5 /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		EB79BF9922ECEDC10064A5B5 /* Log.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
@@ -182,6 +187,15 @@
 				EBF8B34122E46CA60057F630 /* EditNote.storyboard */,
 			);
 			path = EditNote;
+			sourceTree = "<group>";
+		};
+		EB08A21322F384AF0057ED10 /* GalleryPreview */ = {
+			isa = PBXGroup;
+			children = (
+				EB08A21422F384C70057ED10 /* GalleryPreview.storyboard */,
+				EB08A21622F384E50057ED10 /* GalleryPreviewViewController.swift */,
+			);
+			path = GalleryPreview;
 			sourceTree = "<group>";
 		};
 		EB38F3DF22E2083C007E07D2 /* Helpers */ = {
@@ -367,6 +381,7 @@
 		EBF8B33922E46A270057F630 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				EB08A21322F384AF0057ED10 /* GalleryPreview */,
 				EBB613BE22F37DA900A1C1B2 /* GalleryImagePicker */,
 				EBB613B322F36E7600A1C1B2 /* GalleryNavigation */,
 				EBDE541122EE2F0E0096A7B5 /* Gallery */,
@@ -493,6 +508,7 @@
 				EB79BFA322ECEE620064A5B5 /* ColorPicker.storyboard in Resources */,
 				EBDE53FB22EE2D4B0096A7B5 /* Root.storyboard in Resources */,
 				EB79BFA722ECEEA40064A5B5 /* ColorCollectionViewCell.xib in Resources */,
+				EB08A21522F384C70057ED10 /* GalleryPreview.storyboard in Resources */,
 				EB868DA822DC776E0089FE7D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -582,6 +598,7 @@
 				EBDE542722EE34EF0096A7B5 /* NoteTableViewCell.swift in Sources */,
 				EBB613C022F37DD600A1C1B2 /* GalleryImagePickerController.swift in Sources */,
 				EBDE540C22EE2E500096A7B5 /* NotesViewController.swift in Sources */,
+				EB08A21722F384E50057ED10 /* GalleryPreviewViewController.swift in Sources */,
 				EB868DCC22DC778F0089FE7D /* NoteExtension.swift in Sources */,
 				EB868DA322DC776E0089FE7D /* AppDelegate.swift in Sources */,
 				EB868DCE22DC778F0089FE7D /* Note.swift in Sources */,
@@ -594,6 +611,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB08A21822F384E50057ED10 /* GalleryPreviewViewController.swift in Sources */,
 				EB79BFA222ECEE620064A5B5 /* ColorPickerViewController.swift in Sources */,
 				EB79BFAA22ECEEA40064A5B5 /* ColorCollectionViewCell.swift in Sources */,
 				EBB613B222F3694A00A1C1B2 /* RootViewController.swift in Sources */,
