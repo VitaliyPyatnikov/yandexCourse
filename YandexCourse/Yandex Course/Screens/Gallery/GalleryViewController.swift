@@ -29,10 +29,20 @@ final class GalleryViewController: UIViewController {
         setupCollectionView()
         setupNavigationBar()
     }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "GalleryPreviewSegue" {
+            guard let destinationViewController = segue.destination as? GalleryPreviewViewController else {
+                return
+            }
+            destinationViewController.images = images
+            destinationViewController.selectedIndex = selectedIndex
+        }
+    }
 
     // MARK: - Private
 
     private var images: [UIImage] = [UIImage]()
+    private var selectedIndex: Int?
     private let inset: CGFloat = 0.5
     private let spaceBetweenCels: CGFloat = 8
     private let cellsPerRow = 4
@@ -53,6 +63,10 @@ final class GalleryViewController: UIViewController {
         let pickerViewController = GalleryImagePickerController()
         pickerViewController.pickerDelegate = self
         present(pickerViewController, animated: true, completion: nil)
+    }
+    private func selectImage(at indexPath: IndexPath) {
+        selectedIndex = indexPath.row
+        performSegue(withIdentifier: "GalleryPreviewSegue", sender: self)
     }
 }
 
@@ -98,6 +112,9 @@ extension GalleryViewController: UICollectionViewDelegateFlowLayout {
         let marginsAndInsets = inset * 2 + safeAreaInsetsSum + spaceBetweenCels * CGFloat(cellsPerRow - 1)
         let itemWidth = ((collectionView.bounds.size.width - marginsAndInsets) / CGFloat(cellsPerRow))
         return CGSize(width: itemWidth, height: itemWidth)
+    }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        selectImage(at: indexPath)
     }
 }
 

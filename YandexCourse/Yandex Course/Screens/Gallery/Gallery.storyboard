@@ -41,11 +41,20 @@
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="EW7-OE-L8M" id="oqg-7f-9KI"/>
+                        <segue destination="l85-JY-gTd" kind="show" identifier="GalleryPreviewSegue" id="S4V-S4-Q16"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TeL-H5-p17" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="416" y="-223"/>
+        </scene>
+        <!--GalleryPreview-->
+        <scene sceneID="gdB-Xh-5yK">
+            <objects>
+                <viewControllerPlaceholder storyboardName="GalleryPreview" id="l85-JY-gTd" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E2v-cF-lgR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1033" y="-224"/>
         </scene>
     </scenes>
 </document>
