@@ -12,6 +12,30 @@
 		EB08A21522F384C70057ED10 /* GalleryPreview.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB08A21422F384C70057ED10 /* GalleryPreview.storyboard */; };
 		EB08A21722F384E50057ED10 /* GalleryPreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB08A21622F384E50057ED10 /* GalleryPreviewViewController.swift */; };
 		EB08A21822F384E50057ED10 /* GalleryPreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB08A21622F384E50057ED10 /* GalleryPreviewViewController.swift */; };
+		EB5B5F9E22F6DA430085211C /* AsyncOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5B5F9D22F6DA430085211C /* AsyncOperation.swift */; };
+		EB5B5F9F22F6DA430085211C /* AsyncOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5B5F9D22F6DA430085211C /* AsyncOperation.swift */; };
+		EB5B5FA122F6DBB10085211C /* SaveNoteOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5B5FA022F6DBB10085211C /* SaveNoteOperation.swift */; };
+		EB5B5FA222F6DBB10085211C /* SaveNoteOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5B5FA022F6DBB10085211C /* SaveNoteOperation.swift */; };
+		EB5B5FA422F6DC460085211C /* BaseDBOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5B5FA322F6DC460085211C /* BaseDBOperation.swift */; };
+		EB5B5FA522F6DC460085211C /* BaseDBOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5B5FA322F6DC460085211C /* BaseDBOperation.swift */; };
+		EB5B5FA722F6DC830085211C /* SaveNoteDBOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5B5FA622F6DC830085211C /* SaveNoteDBOperation.swift */; };
+		EB5B5FA822F6DC830085211C /* SaveNoteDBOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5B5FA622F6DC830085211C /* SaveNoteDBOperation.swift */; };
+		EB5B5FAA22F6DD1F0085211C /* SaveNotesBackendOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5B5FA922F6DD1F0085211C /* SaveNotesBackendOperation.swift */; };
+		EB5B5FAB22F6DD1F0085211C /* SaveNotesBackendOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5B5FA922F6DD1F0085211C /* SaveNotesBackendOperation.swift */; };
+		EB5B5FAD22F6DD810085211C /* BaseBackendOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5B5FAC22F6DD810085211C /* BaseBackendOperation.swift */; };
+		EB5B5FAE22F6DD810085211C /* BaseBackendOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5B5FAC22F6DD810085211C /* BaseBackendOperation.swift */; };
+		EB5B5FB022F75A5F0085211C /* LoadNotesBackendOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5B5FAF22F75A5F0085211C /* LoadNotesBackendOperation.swift */; };
+		EB5B5FB122F75A5F0085211C /* LoadNotesBackendOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5B5FAF22F75A5F0085211C /* LoadNotesBackendOperation.swift */; };
+		EB5B5FB322F75C000085211C /* LoadNotesDBOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5B5FB222F75BFF0085211C /* LoadNotesDBOperation.swift */; };
+		EB5B5FB422F75C000085211C /* LoadNotesDBOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5B5FB222F75BFF0085211C /* LoadNotesDBOperation.swift */; };
+		EB5B5FB622F75DB50085211C /* RemoveNoteDBOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5B5FB522F75DB50085211C /* RemoveNoteDBOperation.swift */; };
+		EB5B5FB722F75DB50085211C /* RemoveNoteDBOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5B5FB522F75DB50085211C /* RemoveNoteDBOperation.swift */; };
+		EB5B5FB922F75FE70085211C /* LoadNotesOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5B5FB822F75FE70085211C /* LoadNotesOperation.swift */; };
+		EB5B5FBA22F75FE70085211C /* LoadNotesOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5B5FB822F75FE70085211C /* LoadNotesOperation.swift */; };
+		EB5B5FBC22F766DE0085211C /* SaveNotesDBOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5B5FBB22F766DE0085211C /* SaveNotesDBOperation.swift */; };
+		EB5B5FBD22F766DE0085211C /* SaveNotesDBOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5B5FBB22F766DE0085211C /* SaveNotesDBOperation.swift */; };
+		EB5B5FBF22F769AF0085211C /* RemoveNoteOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5B5FBE22F769AF0085211C /* RemoveNoteOperation.swift */; };
+		EB5B5FC022F769AF0085211C /* RemoveNoteOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5B5FBE22F769AF0085211C /* RemoveNoteOperation.swift */; };
 		EB79BF9522EC98C70064A5B5 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB79BF9322EC98C70064A5B5 /* UIImageExtension.swift */; };
 		EB79BF9622EC98C70064A5B5 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB79BF9322EC98C70064A5B5 /* UIImageExtension.swift */; };
 		EB79BF9722EC98C70064A5B5 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB79BF9422EC98C70064A5B5 /* UIColorExtension.swift */; };
@@ -95,6 +119,18 @@
 		D65FEABD7EDB2194C9EEF5AC /* libPods-Yandex CourseTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Yandex CourseTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB08A21422F384C70057ED10 /* GalleryPreview.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GalleryPreview.storyboard; sourceTree = "<group>"; };
 		EB08A21622F384E50057ED10 /* GalleryPreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryPreviewViewController.swift; sourceTree = "<group>"; };
+		EB5B5F9D22F6DA430085211C /* AsyncOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncOperation.swift; sourceTree = "<group>"; };
+		EB5B5FA022F6DBB10085211C /* SaveNoteOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveNoteOperation.swift; sourceTree = "<group>"; };
+		EB5B5FA322F6DC460085211C /* BaseDBOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseDBOperation.swift; sourceTree = "<group>"; };
+		EB5B5FA622F6DC830085211C /* SaveNoteDBOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveNoteDBOperation.swift; sourceTree = "<group>"; };
+		EB5B5FA922F6DD1F0085211C /* SaveNotesBackendOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveNotesBackendOperation.swift; sourceTree = "<group>"; };
+		EB5B5FAC22F6DD810085211C /* BaseBackendOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseBackendOperation.swift; sourceTree = "<group>"; };
+		EB5B5FAF22F75A5F0085211C /* LoadNotesBackendOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadNotesBackendOperation.swift; sourceTree = "<group>"; };
+		EB5B5FB222F75BFF0085211C /* LoadNotesDBOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadNotesDBOperation.swift; sourceTree = "<group>"; };
+		EB5B5FB522F75DB50085211C /* RemoveNoteDBOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveNoteDBOperation.swift; sourceTree = "<group>"; };
+		EB5B5FB822F75FE70085211C /* LoadNotesOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadNotesOperation.swift; sourceTree = "<group>"; };
+		EB5B5FBB22F766DE0085211C /* SaveNotesDBOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveNotesDBOperation.swift; sourceTree = "<group>"; };
+		EB5B5FBE22F769AF0085211C /* RemoveNoteOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveNoteOperation.swift; sourceTree = "<group>"; };
 		EB79BF9322EC98C70064A5B5 /* UIImageExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 		EB79BF9422EC98C70064A5B5 /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		EB79BF9922ECEDC10064A5B5 /* Log.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
@@ -206,6 +242,41 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		EB5B5F9A22F6D9D50085211C /* Operations */ = {
+			isa = PBXGroup;
+			children = (
+				EB5B5F9D22F6DA430085211C /* AsyncOperation.swift */,
+				EB5B5FA022F6DBB10085211C /* SaveNoteOperation.swift */,
+				EB5B5FB822F75FE70085211C /* LoadNotesOperation.swift */,
+				EB5B5FBE22F769AF0085211C /* RemoveNoteOperation.swift */,
+				EB5B5F9B22F6D9DF0085211C /* BackendOperations */,
+				EB5B5F9C22F6D9EB0085211C /* DBOperations */,
+			);
+			path = Operations;
+			sourceTree = "<group>";
+		};
+		EB5B5F9B22F6D9DF0085211C /* BackendOperations */ = {
+			isa = PBXGroup;
+			children = (
+				EB5B5FAC22F6DD810085211C /* BaseBackendOperation.swift */,
+				EB5B5FA922F6DD1F0085211C /* SaveNotesBackendOperation.swift */,
+				EB5B5FAF22F75A5F0085211C /* LoadNotesBackendOperation.swift */,
+			);
+			path = BackendOperations;
+			sourceTree = "<group>";
+		};
+		EB5B5F9C22F6D9EB0085211C /* DBOperations */ = {
+			isa = PBXGroup;
+			children = (
+				EB5B5FA322F6DC460085211C /* BaseDBOperation.swift */,
+				EB5B5FA622F6DC830085211C /* SaveNoteDBOperation.swift */,
+				EB5B5FBB22F766DE0085211C /* SaveNotesDBOperation.swift */,
+				EB5B5FB222F75BFF0085211C /* LoadNotesDBOperation.swift */,
+				EB5B5FB522F75DB50085211C /* RemoveNoteDBOperation.swift */,
+			);
+			path = DBOperations;
+			sourceTree = "<group>";
+		};
 		EB79BF8C22EC92A60064A5B5 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -257,6 +328,7 @@
 		EB868DA122DC776E0089FE7D /* Yandex Course */ = {
 			isa = PBXGroup;
 			children = (
+				EB5B5F9A22F6D9D50085211C /* Operations */,
 				EB79BF8C22EC92A60064A5B5 /* Extensions */,
 				EBF8B33922E46A270057F630 /* Screens */,
 				EB38F3DF22E2083C007E07D2 /* Helpers */,
@@ -584,19 +656,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB5B5FA722F6DC830085211C /* SaveNoteDBOperation.swift in Sources */,
+				EB5B5FAD22F6DD810085211C /* BaseBackendOperation.swift in Sources */,
+				EB5B5FAA22F6DD1F0085211C /* SaveNotesBackendOperation.swift in Sources */,
 				EB868DD022DC778F0089FE7D /* FileNotebook.swift in Sources */,
 				EBB613B122F3694A00A1C1B2 /* RootViewController.swift in Sources */,
 				EBDE541C22EE2F3E0096A7B5 /* GalleryViewController.swift in Sources */,
 				EB79BF9A22ECEDC10064A5B5 /* Log.swift in Sources */,
 				EB79BFA122ECEE620064A5B5 /* ColorPickerViewController.swift in Sources */,
 				EB868DA522DC776E0089FE7D /* ViewController.swift in Sources */,
+				EB5B5FBF22F769AF0085211C /* RemoveNoteOperation.swift in Sources */,
 				EBDE542F22EE39B50096A7B5 /* NoteCellModel.swift in Sources */,
+				EB5B5FB622F75DB50085211C /* RemoveNoteDBOperation.swift in Sources */,
 				EBB613BA22F3719D00A1C1B2 /* GalleryCollectionViewCell.swift in Sources */,
 				EB79BF9522EC98C70064A5B5 /* UIImageExtension.swift in Sources */,
+				EB5B5FB922F75FE70085211C /* LoadNotesOperation.swift in Sources */,
+				EB5B5FB022F75A5F0085211C /* LoadNotesBackendOperation.swift in Sources */,
 				EBF8B33F22E46C6A0057F630 /* EditNoteViewController.swift in Sources */,
 				EB79BFA922ECEEA40064A5B5 /* ColorCollectionViewCell.swift in Sources */,
 				EBDE542722EE34EF0096A7B5 /* NoteTableViewCell.swift in Sources */,
+				EB5B5FA422F6DC460085211C /* BaseDBOperation.swift in Sources */,
+				EB5B5FB322F75C000085211C /* LoadNotesDBOperation.swift in Sources */,
 				EBB613C022F37DD600A1C1B2 /* GalleryImagePickerController.swift in Sources */,
+				EB5B5F9E22F6DA430085211C /* AsyncOperation.swift in Sources */,
+				EB5B5FA122F6DBB10085211C /* SaveNoteOperation.swift in Sources */,
+				EB5B5FBC22F766DE0085211C /* SaveNotesDBOperation.swift in Sources */,
 				EBDE540C22EE2E500096A7B5 /* NotesViewController.swift in Sources */,
 				EB08A21722F384E50057ED10 /* GalleryPreviewViewController.swift in Sources */,
 				EB868DCC22DC778F0089FE7D /* NoteExtension.swift in Sources */,
@@ -612,17 +696,29 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB08A21822F384E50057ED10 /* GalleryPreviewViewController.swift in Sources */,
+				EB5B5FAB22F6DD1F0085211C /* SaveNotesBackendOperation.swift in Sources */,
 				EB79BFA222ECEE620064A5B5 /* ColorPickerViewController.swift in Sources */,
+				EB5B5FA522F6DC460085211C /* BaseDBOperation.swift in Sources */,
+				EB5B5FBD22F766DE0085211C /* SaveNotesDBOperation.swift in Sources */,
+				EB5B5FB122F75A5F0085211C /* LoadNotesBackendOperation.swift in Sources */,
 				EB79BFAA22ECEEA40064A5B5 /* ColorCollectionViewCell.swift in Sources */,
 				EBB613B222F3694A00A1C1B2 /* RootViewController.swift in Sources */,
 				EB868DD122DC778F0089FE7D /* FileNotebook.swift in Sources */,
 				EB868DCF22DC778F0089FE7D /* Note.swift in Sources */,
+				EB5B5FB722F75DB50085211C /* RemoveNoteDBOperation.swift in Sources */,
 				EB79BF9B22ECEDC10064A5B5 /* Log.swift in Sources */,
 				EBB613C122F37DD600A1C1B2 /* GalleryImagePickerController.swift in Sources */,
+				EB5B5FA822F6DC830085211C /* SaveNoteDBOperation.swift in Sources */,
 				EB868DC522DC77820089FE7D /* NoteTests.swift in Sources */,
+				EB5B5FA222F6DBB10085211C /* SaveNoteOperation.swift in Sources */,
+				EB5B5FAE22F6DD810085211C /* BaseBackendOperation.swift in Sources */,
+				EB5B5FB422F75C000085211C /* LoadNotesDBOperation.swift in Sources */,
+				EB5B5FC022F769AF0085211C /* RemoveNoteOperation.swift in Sources */,
 				EB868DCD22DC778F0089FE7D /* NoteExtension.swift in Sources */,
+				EB5B5FBA22F75FE70085211C /* LoadNotesOperation.swift in Sources */,
 				EB79BF9822EC98C70064A5B5 /* UIColorExtension.swift in Sources */,
 				EB868DC422DC77820089FE7D /* FileNotebookTest.swift in Sources */,
+				EB5B5F9F22F6DA430085211C /* AsyncOperation.swift in Sources */,
 				EBF8B34022E46C6A0057F630 /* EditNoteViewController.swift in Sources */,
 				EBDE540D22EE2E500096A7B5 /* NotesViewController.swift in Sources */,
 				EBDE542822EE34EF0096A7B5 /* NoteTableViewCell.swift in Sources */,
