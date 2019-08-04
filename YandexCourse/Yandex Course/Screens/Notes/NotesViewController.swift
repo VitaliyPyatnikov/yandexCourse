@@ -15,6 +15,17 @@ private enum TableViewButtonMode {
     case done
 }
 
+// MARK: - TableViewAnimation
+
+private enum TableViewAnimation {
+
+    // MARK: - Cases
+
+    case reload
+    case delete(IndexPath)
+}
+
+
 // MARK: - NotesWorker
 
 protocol NotesWorker: class {
@@ -39,6 +50,7 @@ final class NotesViewController: UIViewController {
         super.viewDidLoad()
         setupNavigationBar()
         setupTableView()
+        runLoadOperation(animation: .reload)
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "EditNoteSegue" {
@@ -51,8 +63,69 @@ final class NotesViewController: UIViewController {
 
     // MARK: - Private
 
-    private let fileNotebook: FileNotebookHandler = FileNotebook()
+    private let fileNotebook = FileNotebook()
+    private var storedNotes: [Note]?
+    private let backendQueue = OperationQueue()
+    private let dbQueue = OperationQueue()
+    private let notesOperationQueue = OperationQueue()
+    private var loadNotesOperation: LoadNotesOperation?
+    private var saveNoteOperation: SaveNoteOperation?
+    private var removeNoteOperation: RemoveNoteOperation?
 
+    private func runLoadOperation(animation: TableViewAnimation) {
+        let loadOperation = LoadNotesOperation(notebook: fileNotebook,
+                                                backendQueue: backendQueue,
+                                                dbQueue: dbQueue)
+        loadOperation.completionBlock = {
+            guard let result = loadOperation.result else {
+                self.storedNotes = []
+                return
+            }
+            switch result {
+            case let .success(notes):
+                self.storedNotes = notes
+            default:
+                self.storedNotes = []
+            }
+            switch animation {
+            case .reload:
+                DispatchQueue.main.async {
+                    self.tableVIew.reloadData()
+                }
+            case let .delete(indexPath):
+                // TODO: - Check the problem with constrains while deleting cell
+                DispatchQueue.main.async {
+                    self.tableVIew.deleteRows(at: [indexPath], with: .middle)
+                }
+            }
+
+        }
+        loadNotesOperation = loadOperation
+        notesOperationQueue.addOperation(loadOperation)
+    }
+    private func runSaveNoteOperation(with note: Note) {
+        let saveOperation = SaveNoteOperation(note: note,
+                                              notebook: fileNotebook,
+                                              backendQueue: backendQueue,
+                                              dbQueue: dbQueue)
+        saveOperation.completionBlock = {
+            self.runLoadOperation(animation: .reload)
+        }
+        saveNoteOperation = saveOperation
+        notesOperationQueue.addOperation(saveOperation)
+    }
+    private func runRemoveNoteOperation(with note: Note, at indexPath: IndexPath) {
+        let removeOperation = RemoveNoteOperation(note: note,
+                                                  notebook: fileNotebook,
+                                                  backendQueue: backendQueue,
+                                                  dbQueue: dbQueue)
+        removeOperation.completionBlock = {
+            self.runLoadOperation(animation: .delete(indexPath))
+        }
+        removeNoteOperation = removeOperation
+        notesOperationQueue.addOperation(removeOperation)
+
+    }
     private func setupNavigationBar() {
         title = "Notes"
         setupLeftBarButtonItem(to: .edit)
@@ -78,10 +151,11 @@ final class NotesViewController: UIViewController {
         performSegue(withIdentifier: "EditNoteSegue", sender: self)
     }
     private func removeNote(at indexPath: IndexPath) {
-        let uid = fileNotebook.notes[indexPath.row].uid
-        fileNotebook.remove(with: uid)
-        // TODO: - Check the problem with constrains while deleting cell
-        tableVIew.deleteRows(at: [indexPath], with: .middle)
+        guard let notes = storedNotes else {
+            return
+        }
+        let note = notes[indexPath.row]
+        runRemoveNoteOperation(with: note, at: indexPath)
     }
     @objc private func editMode() {
         if tableVIew.isEditing {
@@ -106,13 +180,16 @@ final class NotesViewController: UIViewController {
 
 extension NotesViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return fileNotebook.notes.count
+        return storedNotes?.count ?? 0
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableVIew.dequeueReusableCell(withIdentifier: "NoteCell", for: indexPath) as? NoteTableViewCell else {
             return UITableViewCell()
         }
-        let model = fileNotebook.notes[indexPath.row]
+        guard let notes = storedNotes else {
+            return UITableViewCell()
+        }
+        let model = notes[indexPath.row]
         let cellModel = NoteCellModel(title: model.title,
                                       description: model.content,
                                       color: model.color)
@@ -144,7 +221,6 @@ extension NotesViewController: UITableViewDelegate {
 
 extension NotesViewController: NotesWorker {
     func addNew(_ note: Note) {
-        fileNotebook.add(note)
-        tableVIew.reloadData()
+        runSaveNoteOperation(with: note)
     }
 }
