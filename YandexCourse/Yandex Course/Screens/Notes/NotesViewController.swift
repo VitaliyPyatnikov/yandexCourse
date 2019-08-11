@@ -74,34 +74,39 @@ final class NotesViewController: UIViewController {
 
     private func runLoadOperation(animation: TableViewAnimation) {
         let loadOperation = LoadNotesOperation(notebook: fileNotebook,
-                                                backendQueue: backendQueue,
-                                                dbQueue: dbQueue)
+                                               backendQueue: backendQueue,
+                                               dbQueue: dbQueue)
         loadOperation.completionBlock = {
             guard let result = loadOperation.result else {
                 self.storedNotes = []
                 return
             }
-            switch result {
-            case let .success(notes):
+            switch (result, animation) {
+            case (let .success(notes), .reload):
                 self.storedNotes = notes
+                self.reloadData()
+            case (let .success(notes), let .delete(indexPath)):
+                self.storedNotes = notes
+                self.deleteRow(at: indexPath)
             default:
                 self.storedNotes = []
-            }
-            switch animation {
-            case .reload:
-                DispatchQueue.main.async {
-                    self.tableVIew.reloadData()
-                }
-            case let .delete(indexPath):
-                // TODO: - Check the problem with constrains while deleting cell
-                DispatchQueue.main.async {
-                    self.tableVIew.deleteRows(at: [indexPath], with: .middle)
-                }
+                self.reloadData()
             }
 
         }
         loadNotesOperation = loadOperation
         notesOperationQueue.addOperation(loadOperation)
+    }
+    private func reloadData() {
+        DispatchQueue.main.async {
+            self.tableVIew.reloadData()
+        }
+    }
+    private func deleteRow(at indexPath: IndexPath) {
+        // TODO: - Check the problem with constrains while deleting cell
+        DispatchQueue.main.async {
+            self.tableVIew.deleteRows(at: [indexPath], with: .middle)
+        }
     }
     private func runSaveNoteOperation(with note: Note) {
         let saveOperation = SaveNoteOperation(note: note,
