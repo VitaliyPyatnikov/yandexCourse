@@ -19,6 +19,7 @@ private enum RequestType: String {
 // MARK: - Closures
 
 typealias UploadCompletionHandler = (_ result: SaveNotesBackendResult, _ gistId: String) -> Void
+typealias LoadCompletionHandler = (_ result: LoadNotesBackendResult, _ gistId: String) -> Void
 typealias RequestCompletionHandler = (Data?, URLResponse?, Error?) -> Void
 
 // MARK: - UploadManager
@@ -26,6 +27,12 @@ typealias RequestCompletionHandler = (Data?, URLResponse?, Error?) -> Void
 protocol UploadManager {
     func upload(with data: Data, uploadCompletion: @escaping UploadCompletionHandler)
     func update(gistId: String, with data: Data, uploadCompletion: @escaping UploadCompletionHandler)
+}
+
+// MARK: - LoadManager
+
+protocol LoadManager {
+    func load(withGistId gistId: String, loadCompletion: @escaping LoadCompletionHandler)
 }
 
 // MARK: - WebEngine
@@ -68,9 +75,15 @@ final class WebEngine {
                          requestCompletionHandler: @escaping RequestCompletionHandler) {
         let dataTask = URLSession.shared.uploadTask(
             with: request,
-            from: data) { (data, response, error) in
-                requestCompletionHandler(data, response, error)
-        }
+            from: data,
+            completionHandler: requestCompletionHandler)
+        dataTask.resume()
+    }
+    private func perform(request: URLRequest,
+                         requestCompletionHandler: @escaping RequestCompletionHandler) {
+        let dataTask = URLSession.shared.dataTask(
+            with: request,
+            completionHandler: requestCompletionHandler)
         dataTask.resume()
     }
 }
@@ -147,3 +160,116 @@ extension WebEngine: UploadManager {
     }
 }
 
+// MARK: - LoadManager
+
+extension WebEngine: LoadManager {
+    func load(withGistId gistId: String, loadCompletion: @escaping LoadCompletionHandler) {
+        Log.info("Start loading with gistId: \(gistId)")
+        guard let loadRequest = getRequest(withGistId: gistId, requestType: .get) else {
+            Log.error("Update request is nil")
+            loadCompletion(.failure(.unprocessableEntity), "")
+            return
+        }
+        perform(request: loadRequest) { [weak self] data, response, error in
+            guard error == nil else {
+                Log.error(String(describing: error?.localizedDescription))
+                loadCompletion(.failure(.unreachable), "")
+                return
+            }
+            guard let response = response as? HTTPURLResponse else {
+                Log.error("Response is nil")
+                loadCompletion(.failure(.unprocessableEntity), "")
+                return
+            }
+            Log.info("Response status code: \(response.statusCode)")
+            guard (200...299).contains(response.statusCode) else {
+                loadCompletion(.failure(.serverError), "")
+                Log.error("Server error")
+                return
+            }
+            guard let data = data else {
+                Log.error("Data is nil")
+                return
+            }
+            if gistId.isEmpty {
+                guard let gistInfo = try? JSONDecoder().decode(
+                    [Gist].self,
+                    from: data) else {
+                        Log.error("Can't parse gist info")
+                        let stringData = String(data: data, encoding: .utf8) ?? ""
+                        Log.info(stringData)
+                        loadCompletion(.failure(.unprocessableEntity), "")
+                        return
+                }
+                var isGistFound = false
+                var foundGistId: String?
+                for gist in gistInfo {
+                    for (_, value) in gist.files {
+                        if value.filename == GistRequest.filename {
+                            foundGistId = gist.id
+                            isGistFound = true
+                            break
+                        }
+                    }
+                    if isGistFound {
+                        break
+                    }
+                }
+                guard let gistID = foundGistId else {
+                    Log.error("Gist id not found")
+                    loadCompletion(.failure(.unprocessableEntity), "")
+                    return
+                }
+                loadCompletion(.failure(.retryNeeded), gistID)
+            } else {
+                guard let gist = try? JSONDecoder().decode(
+                    Gist.self,
+                    from: data) else {
+                        Log.error("Can't parse gist info")
+                        let stringData = String(data: data, encoding: .utf8) ?? ""
+                        Log.info(stringData)
+                        loadCompletion(.failure(.unprocessableEntity), "")
+                        return
+                }
+                var content: String?
+                for (_, value) in gist.files {
+                    if value.filename == GistRequest.filename {
+                        content = value.content
+                        break
+                    }
+                }
+                guard let notesAsString = content else {
+                    loadCompletion(.failure(.unprocessableEntity), "")
+                    return
+                }
+                guard let jsonArray = self?.getJSON(with: notesAsString) else {
+                    Log.error("Can't parse notes")
+                    loadCompletion(.failure(.unprocessableEntity), "")
+                    return
+                }
+                var notes = [Note]()
+                jsonArray.forEach {
+                    if let note = Note.parse(json: $0) {
+                        notes.append(note)
+                    } else {
+                        Log.error("Can't parse note from json \($0)")
+                    }
+                }
+                loadCompletion(.success(notes), "")
+            }
+
+            Log.info("Load request finished")
+        }
+    }
+    private func getJSON(with string: String) -> [[String: Any]]? {
+        do {
+            let jsonData = Data(string.utf8)
+            let jsonArray = try JSONSerialization.jsonObject(with: jsonData,
+                                                             options: []) as? [[String: Any]]
+            return jsonArray
+        } catch  {
+            Log.error(error.localizedDescription)
+        }
+        return nil
+    }
+}

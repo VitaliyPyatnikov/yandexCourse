@@ -36,7 +36,29 @@ final class LoadNotesBackendOperation: BaseBackendOperation {
     // MARK: - Lyfe cycle
 
     override func main() {
-        result = .failure(.unreachable)
-        finish()
+        loadNotes { [weak self] (result, gistId) in
+            self?.result = result
+            self?.finish()
+        }
+    }
+
+    // MARK: - Private
+
+    private let loadManager: LoadManager = WebEngine()
+    private let storage = Storage()
+
+    private func loadNotes(completionHandler: @escaping LoadCompletionHandler) {
+        let gistId = storage.gistId
+        loadManager.load(withGistId: gistId) { [weak self] result, gistId in
+            switch result {
+            case .failure(.retryNeeded):
+                if !gistId.isEmpty {
+                    self?.storage.gistId = gistId
+                    self?.loadManager.load(withGistId: gistId, loadCompletion: completionHandler)
+                }
+            default:
+                completionHandler(result, "")
+            }
+        }
     }
 }
