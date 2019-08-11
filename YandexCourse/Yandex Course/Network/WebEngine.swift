@@ -8,6 +8,14 @@
 
 import Foundation
 
+// MARK: - RequestType
+
+private enum RequestType: String {
+    case get = "GET"
+    case post = "POST"
+    case patch = "PATCH"
+}
+
 // MARK: - Closures
 
 typealias UploadCompletionHandler = (_ result: SaveNotesBackendResult, _ gistId: String) -> Void
