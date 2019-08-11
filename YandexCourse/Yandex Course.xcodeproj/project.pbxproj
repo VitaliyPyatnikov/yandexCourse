@@ -38,6 +38,8 @@
 		EB5B5FC022F769AF0085211C /* RemoveNoteOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5B5FBE22F769AF0085211C /* RemoveNoteOperation.swift */; };
 		EB6D1B7723008E060053476D /* Gist.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6D1B7623008E060053476D /* Gist.swift */; };
 		EB6D1B7823008E060053476D /* Gist.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6D1B7623008E060053476D /* Gist.swift */; };
+		EB6D1B7A23008FB60053476D /* GistResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6D1B7923008FB60053476D /* GistResponse.swift */; };
+		EB6D1B7B23008FB60053476D /* GistResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6D1B7923008FB60053476D /* GistResponse.swift */; };
 		EB6D1B8123009F360053476D /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6D1B8023009F360053476D /* Storage.swift */; };
 		EB6D1B8223009F360053476D /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6D1B8023009F360053476D /* Storage.swift */; };
 		EB79BF9522EC98C70064A5B5 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB79BF9322EC98C70064A5B5 /* UIImageExtension.swift */; };
@@ -136,6 +138,7 @@
 		EB5B5FBB22F766DE0085211C /* SaveNotesDBOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveNotesDBOperation.swift; sourceTree = "<group>"; };
 		EB5B5FBE22F769AF0085211C /* RemoveNoteOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveNoteOperation.swift; sourceTree = "<group>"; };
 		EB6D1B7623008E060053476D /* Gist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gist.swift; sourceTree = "<group>"; };
+		EB6D1B7923008FB60053476D /* GistResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistResponse.swift; sourceTree = "<group>"; };
 		EB6D1B8023009F360053476D /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
 		EB79BF9322EC98C70064A5B5 /* UIImageExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 		EB79BF9422EC98C70064A5B5 /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
@@ -283,6 +286,14 @@
 			path = DBOperations;
 			sourceTree = "<group>";
 		};
+		EB6D1B7123008D9B0053476D /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				EB6D1B7923008FB60053476D /* GistResponse.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		EB6D1B7523008DCE0053476D /* Gist */ = {
 			isa = PBXGroup;
 			children = (
@@ -351,6 +362,7 @@
 			isa = PBXGroup;
 			children = (
 				EB6D1B7F23009F120053476D /* Storage */,
+				EB6D1B7123008D9B0053476D /* Network */,
 				EB5B5F9A22F6D9D50085211C /* Operations */,
 				EB79BF8C22EC92A60064A5B5 /* Extensions */,
 				EBF8B33922E46A270057F630 /* Screens */,
@@ -692,6 +704,7 @@
 				EB868DA522DC776E0089FE7D /* ViewController.swift in Sources */,
 				EB5B5FBF22F769AF0085211C /* RemoveNoteOperation.swift in Sources */,
 				EBDE542F22EE39B50096A7B5 /* NoteCellModel.swift in Sources */,
+				EB6D1B7A23008FB60053476D /* GistResponse.swift in Sources */,
 				EB5B5FB622F75DB50085211C /* RemoveNoteDBOperation.swift in Sources */,
 				EBB613BA22F3719D00A1C1B2 /* GalleryCollectionViewCell.swift in Sources */,
 				EB79BF9522EC98C70064A5B5 /* UIImageExtension.swift in Sources */,
@@ -745,6 +758,7 @@
 				EB868DCD22DC778F0089FE7D /* NoteExtension.swift in Sources */,
 				EB5B5FBA22F75FE70085211C /* LoadNotesOperation.swift in Sources */,
 				EB79BF9822EC98C70064A5B5 /* UIColorExtension.swift in Sources */,
+				EB6D1B7B23008FB60053476D /* GistResponse.swift in Sources */,
 				EB868DC422DC77820089FE7D /* FileNotebookTest.swift in Sources */,
 				EB5B5F9F22F6DA430085211C /* AsyncOperation.swift in Sources */,
 				EBF8B34022E46C6A0057F630 /* EditNoteViewController.swift in Sources */,
