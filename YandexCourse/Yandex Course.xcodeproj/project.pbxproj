@@ -36,6 +36,8 @@
 		EB5B5FBD22F766DE0085211C /* SaveNotesDBOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5B5FBB22F766DE0085211C /* SaveNotesDBOperation.swift */; };
 		EB5B5FBF22F769AF0085211C /* RemoveNoteOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5B5FBE22F769AF0085211C /* RemoveNoteOperation.swift */; };
 		EB5B5FC022F769AF0085211C /* RemoveNoteOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5B5FBE22F769AF0085211C /* RemoveNoteOperation.swift */; };
+		EB6D1B8123009F360053476D /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6D1B8023009F360053476D /* Storage.swift */; };
+		EB6D1B8223009F360053476D /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6D1B8023009F360053476D /* Storage.swift */; };
 		EB79BF9522EC98C70064A5B5 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB79BF9322EC98C70064A5B5 /* UIImageExtension.swift */; };
 		EB79BF9622EC98C70064A5B5 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB79BF9322EC98C70064A5B5 /* UIImageExtension.swift */; };
 		EB79BF9722EC98C70064A5B5 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB79BF9422EC98C70064A5B5 /* UIColorExtension.swift */; };
@@ -131,6 +133,7 @@
 		EB5B5FB822F75FE70085211C /* LoadNotesOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadNotesOperation.swift; sourceTree = "<group>"; };
 		EB5B5FBB22F766DE0085211C /* SaveNotesDBOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveNotesDBOperation.swift; sourceTree = "<group>"; };
 		EB5B5FBE22F769AF0085211C /* RemoveNoteOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveNoteOperation.swift; sourceTree = "<group>"; };
+		EB6D1B8023009F360053476D /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
 		EB79BF9322EC98C70064A5B5 /* UIImageExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 		EB79BF9422EC98C70064A5B5 /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		EB79BF9922ECEDC10064A5B5 /* Log.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
@@ -277,6 +280,14 @@
 			path = DBOperations;
 			sourceTree = "<group>";
 		};
+		EB6D1B7F23009F120053476D /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				EB6D1B8023009F360053476D /* Storage.swift */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
 		EB79BF8C22EC92A60064A5B5 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -328,6 +339,7 @@
 		EB868DA122DC776E0089FE7D /* Yandex Course */ = {
 			isa = PBXGroup;
 			children = (
+				EB6D1B7F23009F120053476D /* Storage */,
 				EB5B5F9A22F6D9D50085211C /* Operations */,
 				EB79BF8C22EC92A60064A5B5 /* Extensions */,
 				EBF8B33922E46A270057F630 /* Screens */,
@@ -663,6 +675,7 @@
 				EBB613B122F3694A00A1C1B2 /* RootViewController.swift in Sources */,
 				EBDE541C22EE2F3E0096A7B5 /* GalleryViewController.swift in Sources */,
 				EB79BF9A22ECEDC10064A5B5 /* Log.swift in Sources */,
+				EB6D1B8123009F360053476D /* Storage.swift in Sources */,
 				EB79BFA122ECEE620064A5B5 /* ColorPickerViewController.swift in Sources */,
 				EB868DA522DC776E0089FE7D /* ViewController.swift in Sources */,
 				EB5B5FBF22F769AF0085211C /* RemoveNoteOperation.swift in Sources */,
@@ -698,6 +711,7 @@
 				EB08A21822F384E50057ED10 /* GalleryPreviewViewController.swift in Sources */,
 				EB5B5FAB22F6DD1F0085211C /* SaveNotesBackendOperation.swift in Sources */,
 				EB79BFA222ECEE620064A5B5 /* ColorPickerViewController.swift in Sources */,
+				EB6D1B8223009F360053476D /* Storage.swift in Sources */,
 				EB5B5FA522F6DC460085211C /* BaseDBOperation.swift in Sources */,
 				EB5B5FBD22F766DE0085211C /* SaveNotesDBOperation.swift in Sources */,
 				EB5B5FB122F75A5F0085211C /* LoadNotesBackendOperation.swift in Sources */,
