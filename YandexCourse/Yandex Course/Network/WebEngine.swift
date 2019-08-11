@@ -39,7 +39,7 @@ final class WebEngine {
     private let token = "YOUR_TOKEN_HERE"
     private let tokenError = "YOUR_TOKEN_HERE"
 
-    private func uploadRequest(withGistId gistId: String) -> URLRequest? {
+    private func getRequest(withGistId gistId: String, requestType: RequestType) -> URLRequest? {
         if token == tokenError {
             Log.error("Please setup correct token")
             return nil
@@ -57,7 +57,7 @@ final class WebEngine {
         }
 
         var request = URLRequest(url: finalURL)
-        request.httpMethod = gistId.isEmpty ? "POST" : "PATCH"
+        request.httpMethod = requestType.rawValue
         request.setValue(tokenString, forHTTPHeaderField: "Authorization")
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
 
@@ -80,7 +80,7 @@ final class WebEngine {
 extension WebEngine: UploadManager {
     func upload(with data: Data, uploadCompletion: @escaping UploadCompletionHandler) {
         Log.info("Start uploading")
-        guard let uploadRequest = uploadRequest(withGistId: "") else {
+        guard let uploadRequest = getRequest(withGistId: "", requestType: .post) else {
             Log.error("Upload request is nil")
             uploadCompletion(.failure(.unprocessableEntity), "")
             return
@@ -94,7 +94,7 @@ extension WebEngine: UploadManager {
     }
     func update(gistId: String, with data: Data, uploadCompletion: @escaping UploadCompletionHandler) {
         Log.info("Start updating")
-        guard let updateRequest = uploadRequest(withGistId: gistId) else {
+        guard let updateRequest = getRequest(withGistId: gistId, requestType: .patch) else {
             Log.error("Update request is nil")
             uploadCompletion(.failure(.unprocessableEntity), "")
             return
