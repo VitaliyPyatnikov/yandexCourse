@@ -24,6 +24,7 @@ final class SaveNotesDBOperation: BaseDBOperation {
     override func main() {
         // just now result in unused
         // maybe add result as return type
+        notes.forEach { notebook.add($0) }
         let _ = notebook.saveToFile()
         finish()
     }

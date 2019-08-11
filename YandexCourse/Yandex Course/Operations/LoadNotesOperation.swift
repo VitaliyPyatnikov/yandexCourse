@@ -33,7 +33,6 @@ final class LoadNotesOperation: AsyncOperation {
             case let .success(notes):
                 self.result = .success(notes)
                 self.save(notes: notes, with: notebook, at: dbQueue)
-                self.finish()
              case .failure:
                 self.loadFromDB(to: notebook, with: dbQueue)
             }
@@ -64,7 +63,6 @@ final class LoadNotesOperation: AsyncOperation {
             case let .success(notes):
                 self.result = .success(notes)
                 self.save(notes: notes, with: notebook, at: dbQueue)
-                self.finish()
             case .failure:
                 self.result = loadFromDBResult
                 self.finish()
@@ -74,6 +72,10 @@ final class LoadNotesOperation: AsyncOperation {
     }
     private func save(notes: [Note], with notebook: FileNotebook, at dbQueue: OperationQueue) {
         let saveNotesToDB = SaveNotesDBOperation(notes: notes, notebook: notebook)
+        saveNotesToDB.completionBlock = {
+            self.finish()
+            return
+        }
         dbQueue.addOperation(saveNotesToDB)
     }
 }
