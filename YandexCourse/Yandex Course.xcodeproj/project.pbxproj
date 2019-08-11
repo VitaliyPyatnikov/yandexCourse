@@ -36,6 +36,8 @@
 		EB5B5FBD22F766DE0085211C /* SaveNotesDBOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5B5FBB22F766DE0085211C /* SaveNotesDBOperation.swift */; };
 		EB5B5FBF22F769AF0085211C /* RemoveNoteOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5B5FBE22F769AF0085211C /* RemoveNoteOperation.swift */; };
 		EB5B5FC022F769AF0085211C /* RemoveNoteOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5B5FBE22F769AF0085211C /* RemoveNoteOperation.swift */; };
+		EB6D1B7323008DBA0053476D /* WebEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6D1B7223008DBA0053476D /* WebEngine.swift */; };
+		EB6D1B7423008DBA0053476D /* WebEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6D1B7223008DBA0053476D /* WebEngine.swift */; };
 		EB6D1B7723008E060053476D /* Gist.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6D1B7623008E060053476D /* Gist.swift */; };
 		EB6D1B7823008E060053476D /* Gist.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6D1B7623008E060053476D /* Gist.swift */; };
 		EB6D1B7A23008FB60053476D /* GistResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6D1B7923008FB60053476D /* GistResponse.swift */; };
@@ -139,6 +141,7 @@
 		EB5B5FB822F75FE70085211C /* LoadNotesOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadNotesOperation.swift; sourceTree = "<group>"; };
 		EB5B5FBB22F766DE0085211C /* SaveNotesDBOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveNotesDBOperation.swift; sourceTree = "<group>"; };
 		EB5B5FBE22F769AF0085211C /* RemoveNoteOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveNoteOperation.swift; sourceTree = "<group>"; };
+		EB6D1B7223008DBA0053476D /* WebEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebEngine.swift; sourceTree = "<group>"; };
 		EB6D1B7623008E060053476D /* Gist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gist.swift; sourceTree = "<group>"; };
 		EB6D1B7923008FB60053476D /* GistResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistResponse.swift; sourceTree = "<group>"; };
 		EB6D1B7C23008FC80053476D /* GistRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistRequest.swift; sourceTree = "<group>"; };
@@ -292,6 +295,7 @@
 		EB6D1B7123008D9B0053476D /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				EB6D1B7223008DBA0053476D /* WebEngine.swift */,
 				EB6D1B7923008FB60053476D /* GistResponse.swift */,
 				EB6D1B7C23008FC80053476D /* GistRequest.swift */,
 			);
@@ -724,6 +728,7 @@
 				EB5B5F9E22F6DA430085211C /* AsyncOperation.swift in Sources */,
 				EB5B5FA122F6DBB10085211C /* SaveNoteOperation.swift in Sources */,
 				EB5B5FBC22F766DE0085211C /* SaveNotesDBOperation.swift in Sources */,
+				EB6D1B7323008DBA0053476D /* WebEngine.swift in Sources */,
 				EBDE540C22EE2E500096A7B5 /* NotesViewController.swift in Sources */,
 				EB08A21722F384E50057ED10 /* GalleryPreviewViewController.swift in Sources */,
 				EB868DCC22DC778F0089FE7D /* NoteExtension.swift in Sources */,
@@ -775,6 +780,7 @@
 				EBB613BB22F3719D00A1C1B2 /* GalleryCollectionViewCell.swift in Sources */,
 				EB868DB822DC776F0089FE7D /* Yandex_CourseTests.swift in Sources */,
 				EBDE543022EE39B50096A7B5 /* NoteCellModel.swift in Sources */,
+				EB6D1B7423008DBA0053476D /* WebEngine.swift in Sources */,
 				EB79BF9622EC98C70064A5B5 /* UIImageExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
