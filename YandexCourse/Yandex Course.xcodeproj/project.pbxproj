@@ -36,6 +36,8 @@
 		EB5B5FBD22F766DE0085211C /* SaveNotesDBOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5B5FBB22F766DE0085211C /* SaveNotesDBOperation.swift */; };
 		EB5B5FBF22F769AF0085211C /* RemoveNoteOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5B5FBE22F769AF0085211C /* RemoveNoteOperation.swift */; };
 		EB5B5FC022F769AF0085211C /* RemoveNoteOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5B5FBE22F769AF0085211C /* RemoveNoteOperation.swift */; };
+		EB6D1B7723008E060053476D /* Gist.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6D1B7623008E060053476D /* Gist.swift */; };
+		EB6D1B7823008E060053476D /* Gist.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6D1B7623008E060053476D /* Gist.swift */; };
 		EB6D1B8123009F360053476D /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6D1B8023009F360053476D /* Storage.swift */; };
 		EB6D1B8223009F360053476D /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6D1B8023009F360053476D /* Storage.swift */; };
 		EB79BF9522EC98C70064A5B5 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB79BF9322EC98C70064A5B5 /* UIImageExtension.swift */; };
@@ -133,6 +135,7 @@
 		EB5B5FB822F75FE70085211C /* LoadNotesOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadNotesOperation.swift; sourceTree = "<group>"; };
 		EB5B5FBB22F766DE0085211C /* SaveNotesDBOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveNotesDBOperation.swift; sourceTree = "<group>"; };
 		EB5B5FBE22F769AF0085211C /* RemoveNoteOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveNoteOperation.swift; sourceTree = "<group>"; };
+		EB6D1B7623008E060053476D /* Gist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gist.swift; sourceTree = "<group>"; };
 		EB6D1B8023009F360053476D /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
 		EB79BF9322EC98C70064A5B5 /* UIImageExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 		EB79BF9422EC98C70064A5B5 /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
@@ -280,6 +283,14 @@
 			path = DBOperations;
 			sourceTree = "<group>";
 		};
+		EB6D1B7523008DCE0053476D /* Gist */ = {
+			isa = PBXGroup;
+			children = (
+				EB6D1B7623008E060053476D /* Gist.swift */,
+			);
+			path = Gist;
+			sourceTree = "<group>";
+		};
 		EB6D1B7F23009F120053476D /* Storage */ = {
 			isa = PBXGroup;
 			children = (
@@ -368,6 +379,7 @@
 		EB868DC622DC778F0089FE7D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				EB6D1B7523008DCE0053476D /* Gist */,
 				EB868DC722DC778F0089FE7D /* FileNotebook */,
 				EB79BF9C22ECEDED0064A5B5 /* ColorCellModel.swift */,
 				EBDE542E22EE39B50096A7B5 /* NoteCellModel.swift */,
@@ -700,6 +712,7 @@
 				EB868DA322DC776E0089FE7D /* AppDelegate.swift in Sources */,
 				EB868DCE22DC778F0089FE7D /* Note.swift in Sources */,
 				EB79BF9722EC98C70064A5B5 /* UIColorExtension.swift in Sources */,
+				EB6D1B7723008E060053476D /* Gist.swift in Sources */,
 				EB79BF9D22ECEDED0064A5B5 /* ColorCellModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -724,6 +737,7 @@
 				EBB613C122F37DD600A1C1B2 /* GalleryImagePickerController.swift in Sources */,
 				EB5B5FA822F6DC830085211C /* SaveNoteDBOperation.swift in Sources */,
 				EB868DC522DC77820089FE7D /* NoteTests.swift in Sources */,
+				EB6D1B7823008E060053476D /* Gist.swift in Sources */,
 				EB5B5FA222F6DBB10085211C /* SaveNoteOperation.swift in Sources */,
 				EB5B5FAE22F6DD810085211C /* BaseBackendOperation.swift in Sources */,
 				EB5B5FB422F75C000085211C /* LoadNotesDBOperation.swift in Sources */,
