@@ -12,15 +12,17 @@ import Foundation
 
 struct Gist: Decodable {
     let files: [String: GistFile]
-    let owner: Owner
-    let comments: Int
+    let owner: Owner?
+    let comments: Int?
     let createdAt: String
+    let id: String
 
     enum CodingKeys: String, CodingKey {
         case files
         case owner
         case comments
         case createdAt = "created_at"
+        case id
     }
 }
 
@@ -35,9 +37,10 @@ struct Owner: Decodable {
 struct GistFile: Decodable {
     let filename: String
     let type: String
-    let language: String
+    let language: String?
     let rawUrl: String
     let size: Int
+    let content: String?
 
     enum CodingKeys: String, CodingKey {
         case filename
@@ -45,5 +48,6 @@ struct GistFile: Decodable {
         case language
         case rawUrl = "raw_url"
         case size
+        case content
     }
 }
