@@ -17,6 +17,7 @@ enum NetworkError {
     case unreachable
     case unprocessableEntity
     case serverError
+    case retryNeeded
 }
 
 // MARK: - SaveNotesBackendResult
