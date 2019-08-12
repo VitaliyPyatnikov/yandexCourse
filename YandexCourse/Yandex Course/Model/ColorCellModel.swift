@@ -35,4 +35,17 @@ enum NoteColor: Equatable {
             return color
         }
     }
+
+    init(_ color: UIColor) {
+        switch color {
+        case .white:
+            self = .white
+        case .red:
+            self = .red
+        case .green:
+            self = .green
+        default:
+            self = .custom(color: color)
+        }
+    }
 }
