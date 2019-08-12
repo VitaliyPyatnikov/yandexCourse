@@ -92,6 +92,9 @@ final class NotesViewController: UIViewController {
                 self.storedNotes = []
                 self.reloadData()
             }
+            DispatchQueue.main.async {
+                self.tableVIew.isUserInteractionEnabled = true
+            }
 
         }
         loadNotesOperation = loadOperation
@@ -160,6 +163,7 @@ final class NotesViewController: UIViewController {
             return
         }
         let note = notes[indexPath.row]
+        tableVIew.isUserInteractionEnabled = false
         runRemoveNoteOperation(with: note, at: indexPath)
     }
     @objc private func editMode() {
