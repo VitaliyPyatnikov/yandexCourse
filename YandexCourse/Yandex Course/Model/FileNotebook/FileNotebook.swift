@@ -67,6 +67,9 @@ extension FileNotebook: FileNotebookHandler {
         if !storedNotes.contains(where: { $0.uid == note.uid }) {
             Log.info("Successfully add new note with uid: \(note.uid)")
             storedNotes.append(note)
+        } else {
+            // bad decision
+            replace(editedNote: note, with: note.uid)
         }
     }
     func remove(with uid: String) {
@@ -137,5 +140,19 @@ extension FileNotebook: FileNotebookHandler {
             Log.error(error.localizedDescription)
         }
         return nil
+    }
+    private func replace(editedNote: Note, with uid: String) {
+        // TODO: - add tests for that
+        var indexToUpdate: Int?
+        for (index, note) in storedNotes.enumerated() {
+            if note.uid == uid {
+                indexToUpdate = index
+                break
+            }
+        }
+        guard let editedIndex = indexToUpdate else {
+            return
+        }
+        storedNotes[editedIndex] = editedNote
     }
 }

@@ -40,6 +40,8 @@ final class EditNoteViewController: UIViewController {
     // MARK: - Properties
 
     weak var notesWorker: NotesWorker?
+    var isEditNote = false
+    var note: Note?
 
     // MARK: - Life cycle
 
@@ -49,6 +51,7 @@ final class EditNoteViewController: UIViewController {
         setupCollectionView()
         setupLongGestureRecognizer()
         setupNavigationBar()
+        setupNoteIfNeeded()
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ColorPickerSegue" {
@@ -144,13 +147,56 @@ final class EditNoteViewController: UIViewController {
             selfDestructionDate = destroyDatePicker.date
         }
         let color = colorsDataSource[lastSelectedColorIndex].color.savedColor
-        let note = Note(title: title,
-                        content: content,
-                        importance: .usual,
-                        color: color,
-                        selfDestructionDate: selfDestructionDate)
-        notesWorker?.addNew(note)
+        let newNote: Note
+        if isEditNote {
+            guard let uid = note?.uid else {
+                return
+            }
+            newNote = Note(title: title,
+                           content: content,
+                           importance: .usual,
+                           uid: uid,
+                           color: color,
+                           selfDestructionDate: selfDestructionDate)
+            notesWorker?.updateNote(newNote)
+        } else {
+            newNote = Note(title: title,
+                           content: content,
+                           importance: .usual,
+                           color: color,
+                           selfDestructionDate: selfDestructionDate)
+            notesWorker?.addNew(newNote)
+        }
         performSegue(withIdentifier: "unwindToNotes", sender: self)
+    }
+    private func setupNoteIfNeeded() {
+        if isEditNote {
+            guard let note = note else {
+                return
+            }
+            titleTextField.text = note.title
+            descriptionTextView.text = note.content
+            if let destroyDate = note.selfDestructionDate {
+                destroyDateSwitch.isOn = true
+                destroyDatePicker.date = destroyDate
+            } else {
+                destroyDateSwitch.isOn = false
+            }
+            let noteColor = NoteColor(note.color)
+            let colorIndex: Int
+            switch noteColor {
+            case .white:
+                colorIndex = 0
+            case .red:
+                colorIndex = 1
+            case .green:
+                colorIndex = 2
+            case let .custom(color: color):
+                colorIndex = 3
+                setCustomColor(color)
+            }
+            updateSelectedColor(at: colorIndex)
+        }
     }
 }
 

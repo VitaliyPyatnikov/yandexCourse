@@ -30,6 +30,7 @@ private enum TableViewAnimation {
 
 protocol NotesWorker: class {
     func addNew(_ note: Note)
+    func updateNote(_ note: Note)
 }
 
 // MARK: - NotesViewController
@@ -52,12 +53,20 @@ final class NotesViewController: UIViewController {
         setupTableView()
         runLoadOperation(animation: .reload)
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        isOpenForEditing = false
+    }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "EditNoteSegue" {
             guard let editNoteViewController = segue.destination as? EditNoteViewController else {
                 return
             }
             editNoteViewController.notesWorker = self
+            if isOpenForEditing {
+                editNoteViewController.isEditNote = true
+                editNoteViewController.note = editingNote
+            }
         }
     }
 
@@ -71,6 +80,9 @@ final class NotesViewController: UIViewController {
     private var loadNotesOperation: LoadNotesOperation?
     private var saveNoteOperation: SaveNoteOperation?
     private var removeNoteOperation: RemoveNoteOperation?
+    private var isOpenForEditing: Bool = false
+    private var editingNote: Note?
+    private var indexPath: IndexPath?
 
     private func runLoadOperation(animation: TableViewAnimation) {
         let loadOperation = LoadNotesOperation(notebook: fileNotebook,
@@ -139,7 +151,7 @@ final class NotesViewController: UIViewController {
         setupLeftBarButtonItem(to: .edit)
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add,
                                                             target: self,
-                                                            action: #selector(addNewNote))
+                                                            action: #selector(openEditNote))
     }
     private func setupLeftBarButtonItem(to mode: TableViewButtonMode) {
         let leftBarButton: UIBarButtonItem
@@ -155,7 +167,7 @@ final class NotesViewController: UIViewController {
         }
         navigationItem.leftBarButtonItem = leftBarButton
     }
-    @objc private func addNewNote() {
+    @objc private func openEditNote() {
         performSegue(withIdentifier: "EditNoteSegue", sender: self)
     }
     private func removeNote(at indexPath: IndexPath) {
@@ -224,12 +236,27 @@ extension NotesViewController: UITableViewDelegate {
             removeNote(at: indexPath)
         }
     }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        isOpenForEditing = true
+        editingNote = storedNotes?[indexPath.row]
+        self.indexPath = indexPath
+        openEditNote()
+    }
 }
 
 // MARK: - NotesWorker
 
 extension NotesViewController: NotesWorker {
     func addNew(_ note: Note) {
+        runSaveNoteOperation(with: note)
+    }
+    func updateNote(_ note: Note) {
+        guard let indexPath = indexPath,
+            isOpenForEditing else {
+            Log.error("Can't update note")
+            return
+        }
+        Log.info("Update note at: \(indexPath.row)")
         runSaveNoteOperation(with: note)
     }
 }
