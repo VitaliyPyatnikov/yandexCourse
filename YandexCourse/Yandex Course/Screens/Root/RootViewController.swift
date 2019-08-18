@@ -27,11 +27,11 @@ final class RootViewController: UITabBarController {
             guard let navController = navigationController as? UINavigationController else {
                 return
             }
-            if let notes = navController.viewControllers.first as? NotesViewController {
-                notes.tabBarItem = UITabBarItem(title: "Notes", image: #imageLiteral(resourceName: "Rectangle.pdf"), tag: 0)
+            if let _ = navController.viewControllers.first as? NotesViewController {
+                navController.tabBarItem = UITabBarItem(title: "Notes", image: #imageLiteral(resourceName: "Rectangle.pdf"), tag: 0)
             }
-            if let gallery = navController.viewControllers.first as? GalleryViewController {
-                gallery.tabBarItem = UITabBarItem(title: "Gallery", image: #imageLiteral(resourceName: "Rectangle.pdf"), tag: 1)
+            if let _ = navController.viewControllers.first as? GalleryViewController {
+                navController.tabBarItem = UITabBarItem(title: "Gallery", image: #imageLiteral(resourceName: "Rectangle.pdf"), tag: 1)
             }
         }
     }
