@@ -1,0 +1,19 @@
+name: Swift
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: macOS-latest
+    strategy:
+      matrix:
+        destination: ['platform=iOS Simulator,OS=13.1,name=iPhone 11 Pro Max']
+        xcode: ['/Applications/Xcode_11.1.app/Contents/Developer']
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Pods
+      run: cd YandexCourse && pod install
+    - name: Test
+      run: cd YandexCourse && xcodebuild -workspace Yandex\ Course.xcworkspace -scheme Yandex\ Course\ Test -sdk iphonesimulator -destination 'platform=iOS Simulator,OS=13.1,name=iPhone 11 Pro Max' test | xcpretty --test --color
