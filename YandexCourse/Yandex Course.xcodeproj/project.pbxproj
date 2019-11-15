@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		21009724D4FAB8660BB12F0D /* libPods-Yandex CourseTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D65FEABD7EDB2194C9EEF5AC /* libPods-Yandex CourseTests.a */; };
 		366F5F6C93A8CF7D6C60C698 /* libPods-Yandex Course.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 42354E72F35BBA845562E7C3 /* libPods-Yandex Course.a */; };
+		EB04F3C8237EA3E300F553DE /* GalleryPreview.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB08A21422F384C70057ED10 /* GalleryPreview.storyboard */; };
 		EB08A21522F384C70057ED10 /* GalleryPreview.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB08A21422F384C70057ED10 /* GalleryPreview.storyboard */; };
 		EB08A21722F384E50057ED10 /* GalleryPreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB08A21622F384E50057ED10 /* GalleryPreviewViewController.swift */; };
 		EB08A21822F384E50057ED10 /* GalleryPreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB08A21622F384E50057ED10 /* GalleryPreviewViewController.swift */; };
@@ -641,6 +642,7 @@
 				EB79BFA822ECEEA40064A5B5 /* ColorCollectionViewCell.xib in Resources */,
 				EBDE53FC22EE2D4B0096A7B5 /* Root.storyboard in Resources */,
 				EB79BFA422ECEE620064A5B5 /* ColorPicker.storyboard in Resources */,
+				EB04F3C8237EA3E300F553DE /* GalleryPreview.storyboard in Resources */,
 				EBDE540322EE2DC20096A7B5 /* NotesNavigation.storyboard in Resources */,
 				EBDE542A22EE34EF0096A7B5 /* NoteTableViewCell.xib in Resources */,
 			);
