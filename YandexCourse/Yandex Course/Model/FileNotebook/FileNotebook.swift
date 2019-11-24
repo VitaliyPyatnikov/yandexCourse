@@ -15,7 +15,7 @@ protocol FileNotebookHandler {
     var notes: [Note] { get }
     /// Add new note to the FileNotebook
     /// - Parameters:
-    ///     - note: Note whick should be added to the FileNotebook
+    ///     - note: Note which should be added to the FileNotebook
     func add(_ note: Note)
     /// Remove note with specified uid from FileNotebook
     /// - Parameters:
