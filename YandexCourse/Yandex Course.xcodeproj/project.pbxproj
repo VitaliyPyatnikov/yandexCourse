@@ -41,8 +41,6 @@
 		EB79BFA822ECEEA40064A5B5 /* ColorCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB79BFA522ECEEA40064A5B5 /* ColorCollectionViewCell.xib */; };
 		EB79BFA922ECEEA40064A5B5 /* ColorCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB79BFA622ECEEA40064A5B5 /* ColorCollectionViewCell.swift */; };
 		EB868DA322DC776E0089FE7D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB868DA222DC776E0089FE7D /* AppDelegate.swift */; };
-		EB868DA522DC776E0089FE7D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB868DA422DC776E0089FE7D /* ViewController.swift */; };
-		EB868DA822DC776E0089FE7D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB868DA622DC776E0089FE7D /* Main.storyboard */; };
 		EB868DAA22DC776F0089FE7D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB868DA922DC776F0089FE7D /* Assets.xcassets */; };
 		EB868DAD22DC776F0089FE7D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB868DAB22DC776F0089FE7D /* LaunchScreen.storyboard */; };
 		EB868DB822DC776F0089FE7D /* Yandex_CourseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB868DB722DC776F0089FE7D /* Yandex_CourseTests.swift */; };
@@ -123,8 +121,6 @@
 		EB79BFA622ECEEA40064A5B5 /* ColorCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorCollectionViewCell.swift; sourceTree = "<group>"; };
 		EB868D9F22DC776E0089FE7D /* Yandex Course.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Yandex Course.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB868DA222DC776E0089FE7D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EB868DA422DC776E0089FE7D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		EB868DA722DC776E0089FE7D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EB868DA922DC776F0089FE7D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EB868DAC22DC776F0089FE7D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EB868DAE22DC776F0089FE7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -473,18 +469,8 @@
 				EBDE540422EE2DEC0096A7B5 /* Notes */,
 				EBF8B34422E46D300057F630 /* ColorPicker */,
 				EB05969522E311C60050E16A /* EditNote */,
-				EBF8B33A22E46A2F0057F630 /* Main */,
 			);
 			path = Screens;
-			sourceTree = "<group>";
-		};
-		EBF8B33A22E46A2F0057F630 /* Main */ = {
-			isa = PBXGroup;
-			children = (
-				EB868DA422DC776E0089FE7D /* ViewController.swift */,
-				EB868DA622DC776E0089FE7D /* Main.storyboard */,
-			);
-			path = Main;
 			sourceTree = "<group>";
 		};
 		EBF8B34422E46D300057F630 /* ColorPicker */ = {
@@ -592,7 +578,6 @@
 				EBDE53FB22EE2D4B0096A7B5 /* Root.storyboard in Resources */,
 				EB79BFA722ECEEA40064A5B5 /* ColorCollectionViewCell.xib in Resources */,
 				EB08A21522F384C70057ED10 /* GalleryPreview.storyboard in Resources */,
-				EB868DA822DC776E0089FE7D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -678,7 +663,6 @@
 				EB6D1B8123009F360053476D /* Storage.swift in Sources */,
 				EB79BFA122ECEE620064A5B5 /* ColorPickerViewController.swift in Sources */,
 				EB6D1B7D23008FC80053476D /* GistRequest.swift in Sources */,
-				EB868DA522DC776E0089FE7D /* ViewController.swift in Sources */,
 				EB5B5FBF22F769AF0085211C /* RemoveNoteOperation.swift in Sources */,
 				EBDE542F22EE39B50096A7B5 /* NoteCellModel.swift in Sources */,
 				EB6D1B7A23008FB60053476D /* GistResponse.swift in Sources */,
@@ -730,14 +714,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		EB868DA622DC776E0089FE7D /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				EB868DA722DC776E0089FE7D /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		EB868DAB22DC776F0089FE7D /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
