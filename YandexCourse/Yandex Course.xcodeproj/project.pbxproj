@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		21009724D4FAB8660BB12F0D /* libPods-Yandex CourseTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D65FEABD7EDB2194C9EEF5AC /* libPods-Yandex CourseTests.a */; };
 		366F5F6C93A8CF7D6C60C698 /* libPods-Yandex Course.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 42354E72F35BBA845562E7C3 /* libPods-Yandex Course.a */; };
+		EB07655C23095DD40015C8F4 /* DataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB07655B23095DD40015C8F4 /* DataStorage.swift */; };
+		EB07655F23095E920015C8F4 /* MyNotebook.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EB07655D23095E920015C8F4 /* MyNotebook.xcdatamodeld */; };
 		EB04F3C8237EA3E300F553DE /* GalleryPreview.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB08A21422F384C70057ED10 /* GalleryPreview.storyboard */; };
 		EB08A21522F384C70057ED10 /* GalleryPreview.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB08A21422F384C70057ED10 /* GalleryPreview.storyboard */; };
 		EB08A21722F384E50057ED10 /* GalleryPreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB08A21622F384E50057ED10 /* GalleryPreviewViewController.swift */; };
@@ -51,6 +53,7 @@
 		EB868DCC22DC778F0089FE7D /* NoteExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB868DC922DC778F0089FE7D /* NoteExtension.swift */; };
 		EB868DCE22DC778F0089FE7D /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB868DCA22DC778F0089FE7D /* Note.swift */; };
 		EB868DD022DC778F0089FE7D /* FileNotebook.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB868DCB22DC778F0089FE7D /* FileNotebook.swift */; };
+		EBA0909923099B46009DF30C /* Requests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA0909823099B46009DF30C /* Requests.swift */; };
 		EBB613B122F3694A00A1C1B2 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB613B022F3694A00A1C1B2 /* RootViewController.swift */; };
 		EBB613B522F36E9A00A1C1B2 /* GalleryNavigation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBB613B422F36E9A00A1C1B2 /* GalleryNavigation.storyboard */; };
 		EBB613B622F36E9A00A1C1B2 /* GalleryNavigation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBB613B422F36E9A00A1C1B2 /* GalleryNavigation.storyboard */; };
@@ -94,6 +97,8 @@
 		8925195AFCE584E06361CB1A /* Pods-Yandex Course.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yandex Course.release.xcconfig"; path = "Target Support Files/Pods-Yandex Course/Pods-Yandex Course.release.xcconfig"; sourceTree = "<group>"; };
 		C7D54DF4FACC6FB71F72B80C /* Pods-Yandex Course.testing.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yandex Course.testing.xcconfig"; path = "Target Support Files/Pods-Yandex Course/Pods-Yandex Course.testing.xcconfig"; sourceTree = "<group>"; };
 		D65FEABD7EDB2194C9EEF5AC /* libPods-Yandex CourseTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Yandex CourseTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB07655B23095DD40015C8F4 /* DataStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStorage.swift; sourceTree = "<group>"; };
+		EB07655E23095E920015C8F4 /* MyNotebook.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MyNotebook.xcdatamodel; sourceTree = "<group>"; };
 		EB08A21422F384C70057ED10 /* GalleryPreview.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GalleryPreview.storyboard; sourceTree = "<group>"; };
 		EB08A21622F384E50057ED10 /* GalleryPreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryPreviewViewController.swift; sourceTree = "<group>"; };
 		EB5B5F9D22F6DA430085211C /* AsyncOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncOperation.swift; sourceTree = "<group>"; };
@@ -136,6 +141,8 @@
 		EB868DC922DC778F0089FE7D /* NoteExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteExtension.swift; sourceTree = "<group>"; };
 		EB868DCA22DC778F0089FE7D /* Note.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		EB868DCB22DC778F0089FE7D /* FileNotebook.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileNotebook.swift; sourceTree = "<group>"; };
+		EBA0909823099B46009DF30C /* Requests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requests.swift; sourceTree = "<group>"; };
+		EBA0909A230A0C38009DF30C /* MyNotebook_2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MyNotebook_2.xcdatamodel; sourceTree = "<group>"; };
 		EBB613B022F3694A00A1C1B2 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		EBB613B422F36E9A00A1C1B2 /* GalleryNavigation.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GalleryNavigation.storyboard; sourceTree = "<group>"; };
 		EBB613B822F3719D00A1C1B2 /* GalleryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -281,6 +288,9 @@
 			isa = PBXGroup;
 			children = (
 				EB6D1B8023009F360053476D /* Storage.swift */,
+				EB07655B23095DD40015C8F4 /* DataStorage.swift */,
+				EB07655D23095E920015C8F4 /* MyNotebook.xcdatamodeld */,
+				EBA0909823099B46009DF30C /* Requests.swift */,
 			);
 			path = Storage;
 			sourceTree = "<group>";
@@ -681,6 +691,7 @@
 				EB868DA522DC776E0089FE7D /* ViewController.swift in Sources */,
 				EB5B5FBF22F769AF0085211C /* RemoveNoteOperation.swift in Sources */,
 				EBDE542F22EE39B50096A7B5 /* NoteCellModel.swift in Sources */,
+				EBA0909923099B46009DF30C /* Requests.swift in Sources */,
 				EB6D1B7A23008FB60053476D /* GistResponse.swift in Sources */,
 				EB5B5FB622F75DB50085211C /* RemoveNoteDBOperation.swift in Sources */,
 				EBB613BA22F3719D00A1C1B2 /* GalleryCollectionViewCell.swift in Sources */,
@@ -690,6 +701,7 @@
 				EBF8B33F22E46C6A0057F630 /* EditNoteViewController.swift in Sources */,
 				EB79BFA922ECEEA40064A5B5 /* ColorCollectionViewCell.swift in Sources */,
 				EBDE542722EE34EF0096A7B5 /* NoteTableViewCell.swift in Sources */,
+				EB07655F23095E920015C8F4 /* MyNotebook.xcdatamodeld in Sources */,
 				EB5B5FA422F6DC460085211C /* BaseDBOperation.swift in Sources */,
 				EB5B5FB322F75C000085211C /* LoadNotesDBOperation.swift in Sources */,
 				EBB613C022F37DD600A1C1B2 /* GalleryImagePickerController.swift in Sources */,
@@ -703,6 +715,7 @@
 				EB868DA322DC776E0089FE7D /* AppDelegate.swift in Sources */,
 				EB868DCE22DC778F0089FE7D /* Note.swift in Sources */,
 				EB79BF9722EC98C70064A5B5 /* UIColorExtension.swift in Sources */,
+				EB07655C23095DD40015C8F4 /* DataStorage.swift in Sources */,
 				EB6D1B7723008E060053476D /* Gist.swift in Sources */,
 				EB79BF9D22ECEDED0064A5B5 /* ColorCellModel.swift in Sources */,
 			);
@@ -1087,6 +1100,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		EB07655D23095E920015C8F4 /* MyNotebook.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				EBA0909A230A0C38009DF30C /* MyNotebook_2.xcdatamodel */,
+				EB07655E23095E920015C8F4 /* MyNotebook.xcdatamodel */,
+			);
+			currentVersion = EBA0909A230A0C38009DF30C /* MyNotebook_2.xcdatamodel */;
+			path = MyNotebook.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = EB868D9722DC776E0089FE7D /* Project object */;
 }

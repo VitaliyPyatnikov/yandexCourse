@@ -31,13 +31,24 @@ protocol FileNotebookHandler {
     func loadFromFile() -> Bool
 }
 
+private enum StorageType {
+    case file
+    case coreData
+}
+
 // MARK: - FileNotebook
 
 final class FileNotebook {
 
+    func initializeStorage(completion: @escaping () -> Void) {
+        dataStorage.setupCoreDataStack(completion: completion)
+    }
+
     // MARK: - Private
 
     private var storedNotes: [Note] = []
+    private let dataStorage = DataStorage()
+    private let storageType = StorageType.file
 
     private lazy var fileUrl: URL? = {
         let name = "FileNotebook"
@@ -60,71 +71,108 @@ final class FileNotebook {
 
 extension FileNotebook: FileNotebookHandler {
     var notes: [Note] {
-        return storedNotes
+        switch storageType {
+        case .file:
+            return storedNotes
+        case .coreData:
+            return dataStorage.loadNotes()
+        }
     }
-
+    func syncContexts(notification: Notification, completion: @escaping EmptyCompletion) {
+        dataStorage.mergeContexts(notification: notification, completion: completion)
+    }
     func add(_ note: Note) {
-        if !storedNotes.contains(where: { $0.uid == note.uid }) {
-            Log.info("Successfully add new note with uid: \(note.uid)")
-            storedNotes.append(note)
-        } else {
-            // bad decision
-            replace(editedNote: note, with: note.uid)
+        switch storageType {
+        case .file:
+            if !storedNotes.contains(where: { $0.uid == note.uid }) {
+                Log.info("Successfully add new note with uid: \(note.uid)")
+                storedNotes.append(note)
+            } else {
+                // bad decision
+                replace(editedNote: note, with: note.uid)
+            }
+        case .coreData:
+            dataStorage.saveNote(note)
+        }
+    }
+    func save(notes: [Note]) {
+        switch storageType {
+        case .file:
+            notes.forEach { add($0) }
+        case .coreData:
+            dataStorage.save(notes)
         }
     }
     func remove(with uid: String) {
-        storedNotes.removeAll { (note) -> Bool in
-            if note.uid == uid {
-                Log.info("Remove note with uid: \(uid)")
-                return true
+        switch storageType {
+        case .file:
+            storedNotes.removeAll { (note) -> Bool in
+                if note.uid == uid {
+                    Log.info("Remove note with uid: \(uid)")
+                    return true
+                }
+                return false
             }
-            return false
+        case .coreData:
+            dataStorage.removeNote(with: uid)
         }
     }
     func saveToFile() -> Bool {
-        guard let fileURL = fileUrl else {
-            Log.error("Can't save to file, fileURL is nil")
-            return false
-        }
-        var jsons: [[String: Any]] = []
-        storedNotes.forEach {
-            jsons.append($0.json)
-        }
-        do {
-            let jsonData = try JSONSerialization.data(withJSONObject: jsons, options: [])
-            guard let jsonString = String(data: jsonData, encoding: .utf8) else {
-                Log.error("Can't parse json to string")
+        switch storageType {
+        case .file:
+            guard let fileURL = fileUrl else {
+                Log.error("Can't save to file, fileURL is nil")
                 return false
             }
-            try jsonString.write(to: fileURL,
-                                 atomically: true,
-                                 encoding: String.Encoding.utf8)
-        } catch  {
-            Log.error(error.localizedDescription)
-            return false
+            var jsons: [[String: Any]] = []
+            storedNotes.forEach {
+                jsons.append($0.json)
+            }
+            do {
+                let jsonData = try JSONSerialization.data(withJSONObject: jsons, options: [])
+                guard let jsonString = String(data: jsonData, encoding: .utf8) else {
+                    Log.error("Can't parse json to string")
+                    return false
+                }
+                try jsonString.write(to: fileURL,
+                                     atomically: true,
+                                     encoding: String.Encoding.utf8)
+            } catch  {
+                Log.error(error.localizedDescription)
+                return false
+            }
+            Log.info("Successfully save to file")
+            return true
+        default:
+            return true
         }
-        Log.info("Successfully save to file")
-        return true
     }
     func loadFromFile() -> Bool {
-        guard let fileURL = fileUrl else {
-            Log.error("Can't fileURL is nil")
-            return false
-        }
-        guard let jsonArray = getData(with: fileURL) else {
-            Log.error("Can't get data from link \(fileURL)")
-            return false
-        }
-        storedNotes.removeAll()
-        jsonArray.forEach {
-            guard let note = Note.parse(json: $0) else {
-                Log.error("Can't parse note from json \($0)")
-                return
+        switch storageType {
+        case .file:
+            guard let fileURL = fileUrl else {
+                Log.error("Can't fileURL is nil")
+                return false
             }
-            storedNotes.append(note)
+            guard let jsonArray = getData(with: fileURL) else {
+                Log.error("Can't get data from link \(fileURL)")
+                return false
+            }
+            storedNotes.removeAll()
+            jsonArray.forEach {
+                guard let note = Note.parse(json: $0) else {
+                    Log.error("Can't parse note from json \($0)")
+                    return
+                }
+                storedNotes.append(note)
+            }
+            Log.info("Successfully load from file")
+            return true
+        case .coreData:
+            storedNotes.removeAll()
+            storedNotes = dataStorage.loadNotes()
+            return true
         }
-        Log.info("Successfully load from file")
-        return true
     }
 
     // MARK: - Private

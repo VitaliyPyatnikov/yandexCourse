@@ -51,7 +51,9 @@ final class NotesViewController: UIViewController {
         super.viewDidLoad()
         setupNavigationBar()
         setupTableView()
-        runLoadOperation(animation: .reload)
+        fileNotebook.initializeStorage { [weak self] in
+            self?.runLoadOperation(animation: .reload)
+        }
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
