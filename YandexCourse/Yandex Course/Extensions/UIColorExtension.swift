@@ -57,13 +57,15 @@ extension UIColor {
     }
 
     // MARK: - Static Functions
+
     static func getUInt8Value(fromColorComponent component: CGFloat) -> UInt8 {
         return UInt8(max(0, min(255, round(255 * component))))
     }
     /// Translates color from HSB system to RGB, given constant Brightness value of 1.
-    /// @param hue Hue value in range from 0 to 1 (inclusive).
-    /// @param saturation Saturation value in range from 0 to 1 (inclusive).
-    /// @param brightness Brightness value in range from 0 to 1 (inclusive).
+    /// - Parameters:
+    ///   - hue: hue Hue value in range from 0 to 1 (inclusive).
+    ///   - saturation: saturation Saturation value in range from 0 to 1 (inclusive).
+    ///   - brightness: brightness Brightness value in range from 0 to 1 (inclusive).
     static func rgbFrom(hue: CGFloat,
                         saturation: CGFloat,
                         brightness: CGFloat)
